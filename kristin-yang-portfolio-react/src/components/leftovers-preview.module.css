@@ -1,0 +1,13 @@
+.stage{display:flex;align-items:center;justify-content:center;padding:0;margin:0;position:relative;width:100%;height:100%;overflow:hidden;background:#269afa}
+.canvas{display:block;width:100%;height:100%}
+/* The canvas supplies the backdrop and folding model; these physical planes share its clock. */
+.stage{perspective:1200px;perspective-origin:50% 50%}
+.tray,.paper{position:absolute;left:50%;top:50%;opacity:0;pointer-events:none;will-change:transform,opacity}
+.tray{transform-style:preserve-3d;border-radius:24px;box-shadow:12px 24px 30px -9px #05477870,3px 8px 12px #084b6d35}
+.underside,.walls,.bed,.rim{position:absolute;border-radius:24px;inset:0}
+.underside{transform:translateZ(-3px);background:linear-gradient(135deg,#cf2a24,#85180f);box-shadow:0 2px 2px #76120b80}
+.walls{inset:1px 0 -2px;transform:translateZ(-1.5px);background:linear-gradient(165deg,#fb6a5b 15%,#b91713 70%,#83120c);box-shadow:inset 0 -1px 2px #8c160d66}
+.bed{inset:7px;transform:translateZ(0);border-radius:16px;background:linear-gradient(125deg,#ee635b 0%,#e63f37 48%,#d9231c 100%);box-shadow:inset 3px 5px 7px #92150d40,inset -1px -2px 4px #ff8b6a40}
+.rim{transform:translateZ(4px);border:6px solid #e84235;background:transparent;box-shadow:inset 1px 1px 1px #ff9a7e9c,inset -1px -2px 2px #9c190e60,0 1px 1px #ff9d8277;border-top-color:#f36a5c;border-left-color:#f1594a;border-bottom-color:#ce2a1f;border-right-color:#d82e21}
+.paper{object-fit:fill;border-radius:2px;box-shadow:0 2px 3px #59170e50,0 5px 8px -3px #67201445;backface-visibility:hidden}
+@media(prefers-reduced-motion:reduce){.tray,.paper{display:none}}

@@ -1,0 +1,28 @@
+.map{margin:36px 0 48px;padding:32px clamp(16px,3vw,32px);border:1px solid #e8d9d3;border-radius:16px;background:#fff8f3;overflow:hidden}
+.root{position:relative;display:flex;flex-direction:column;gap:8px;padding:20px 24px;border:1px solid #8C6764;border-radius:10px;background:#8C6764;color:#fffaf6;transform-origin:left center}
+.kicker{font-size:10px;letter-spacing:.15em;opacity:.8}
+.root strong{font-size:23px;font-weight:500;letter-spacing:-.04em}
+.root>span:last-child{font-size:12px;line-height:1.7;opacity:.9}
+.branches{position:relative;padding:24px 0 0 28px;margin-left:22px}
+.branches:before{content:'';position:absolute;left:0;top:0;bottom:30px;width:1px;background:#F2B2AC;transform-origin:top}
+.branch{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);align-items:center;gap:26px;margin-bottom:16px}
+.branch:last-child{margin-bottom:0}
+.branch:before{content:'';position:absolute;left:-28px;top:50%;width:28px;height:1px;background:#F28888;transform-origin:left}
+.feature{position:relative;display:flex;align-items:center;gap:12px;min-height:60px;padding:12px 14px;background:#fffdfb;border:1px solid #e8c9c2;border-radius:8px;transform-origin:left center}
+.feature:after{content:'';position:absolute;right:-27px;top:50%;width:26px;height:1px;background:#F28888;transform-origin:left}
+.index{font-size:10px;color:#8C6764;font-variant-numeric:tabular-nums}
+.feature strong{font-size:14px;font-weight:500;line-height:1.4}
+.details{display:flex;flex-direction:column;gap:4px;font-size:12px;line-height:1.5;color:#70504a;padding:6px 0;transform-origin:left center}
+.details small{color:#8C6764;font-size:10px;margin-top:4px}
+.map[data-motion='pending'] .root,.map[data-motion='pending'] .branch{opacity:0}
+.map[data-motion='pending'] .branches:before{transform:scaleY(0)}
+.map[data-motion='playing'] .root{animation:grow .7s both}
+.map[data-motion='playing'] .branches:before{animation:trunk 2.8s .3s both}
+.map[data-motion='playing'] .branch{animation:grow .65s var(--delay) both}
+.map[data-motion='playing'] .feature:after{animation:extend .45s calc(var(--delay) + .2s) both}
+.map[data-motion='playing'] .details{animation:grow .65s calc(var(--delay) + .4s) both}
+@keyframes grow{from{opacity:0;transform:translateY(10px) scale(.95)}to{opacity:1;transform:none}}
+@keyframes trunk{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes extend{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:600px){.map{padding:20px 14px}.branches{margin-left:10px;padding-left:16px}.branch{gap:14px;grid-template-columns:1fr 1.15fr}.branch:before{left:-16px;width:16px}.feature{padding:10px 8px;gap:6px}.feature:after{right:-15px;width:14px}.feature strong{font-size:12px}.details{font-size:11px}.root{padding:16px}.root strong{font-size:21px}}
+@media(prefers-reduced-motion:reduce){.map *,.map *:before,.map *:after{animation:none!important;transform:none!important;opacity:1!important}}

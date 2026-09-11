@@ -1,0 +1,25 @@
+.companion{position:relative;margin:16px 0 0;width:min(100%,150px);align-self:start}
+.companion button{display:block;width:100%;padding:0;border:0;background:none;cursor:pointer;border-radius:14px;transform-origin:25% 90%;transition:transform .65s ease}
+.companion button:focus-visible{outline:2px solid var(--primary);outline-offset:4px}
+.companion svg{display:block;width:100%;height:auto;overflow:hidden;animation:breathe 6s ease-in-out infinite;transform-origin:20% 95%}
+.companion:hover button,.companion:focus-within button,.companion[data-greet='true'] button{transform:rotate(-2deg) translateY(-2px)}
+.greeting{position:absolute;right:-8px;top:0;padding:6px 10px;border:1px solid #eedbd6;border-radius:12px 12px 12px 2px;background:#fffaf6;color:#70504a;font-size:11px;line-height:1.5;white-space:nowrap;opacity:0;transform:translateY(3px);transition:opacity .4s,transform .4s;pointer-events:none}
+.companion:hover .greeting,.companion:focus-within .greeting,.companion[data-greet='true'] .greeting{opacity:1;transform:none}
+@keyframes breathe{0%,100%{transform:rotate(0) translateY(0)}50%{transform:rotate(.7deg) translateY(-2px)}}
+@media(max-width:600px){.companion{grid-column:1/-1;width:105px;margin-top:10px;justify-self:center}}
+@media(prefers-reduced-motion:reduce){.companion svg{animation:none}.companion button,.greeting{transition:none;transform:none!important}}
+
+.companion{position:fixed;left:-12px;bottom:22px;width:clamp(150px,17vw,205px);margin:0;z-index:15;animation:peekIn 1.4s .4s cubic-bezier(.22,.61,.36,1) both}
+.companion svg{animation:helloGesture 2.4s 1.2s ease-in-out both,breathe 7s 3.6s ease-in-out infinite}
+.greeting{right:-14px;top:8px}
+@keyframes peekIn{from{transform:translateX(-110%)}to{transform:translateX(0)}}
+@keyframes helloGesture{0%,100%{transform:rotate(0)}35%{transform:rotate(-4deg)}65%{transform:rotate(1deg)}}
+@media(max-width:600px){.companion{left:-10px;bottom:12px;width:105px;margin:0}.greeting{right:-35px;top:-12px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){.companion,.companion svg{animation:none;transform:none}}
+
+.companion .greeting{top:auto;bottom:calc(100% + 12px);left:28px;right:auto;transform:translateY(3px)}
+.companion:hover .greeting,.companion:focus-within .greeting,.companion[data-greet='true'] .greeting{transform:none}
+
+.companion .greeting{margin:0;padding:15px 22px;border:1px solid #F2B2AC;border-radius:24px 24px 24px 6px;background:#fff6eb;color:#402820;font-family:"Poly Outfit",sans-serif;font-size:clamp(20px,2vw,25px);font-weight:500;line-height:1.35;box-shadow:0 5px 18px #4028200a;bottom:calc(100% + 18px)}
+.companion .greeting::after{content:"";position:absolute;left:22px;bottom:-8px;width:14px;height:14px;background:#fff6eb;border-right:1px solid #F2B2AC;border-bottom:1px solid #F2B2AC;transform:rotate(45deg)}
+@media(max-width:600px){.companion .greeting{padding:12px 18px;font-size:20px;left:24px;bottom:calc(100% + 14px)}}

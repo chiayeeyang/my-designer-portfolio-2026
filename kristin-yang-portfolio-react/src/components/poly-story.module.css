@@ -1,0 +1,10 @@
+.story{margin:32px 0 0;overflow:hidden;background:#fff3e5;border-radius:clamp(14px,2vw,28px)}
+.story svg{display:block;width:100%;height:auto;overflow:hidden}
+.embrace{transform-origin:1146px 434px;animation:embrace 4.6s ease-in-out infinite;animation-play-state:paused}
+.playing .embrace{animation-play-state:running}
+.first,.second{opacity:0}
+.playing .first{animation:words 900ms cubic-bezier(.16,1,.3,1) both}
+.playing .second{animation:words 1100ms 650ms cubic-bezier(.16,1,.3,1) both}
+@keyframes words{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes embrace{0%,100%{transform:scale(1.008)}50%{transform:scaleX(1.035) scaleY(1.045)}}
+@media(prefers-reduced-motion:reduce){.story .embrace,.story .first,.story .second{animation:none;opacity:1;transform:none}}

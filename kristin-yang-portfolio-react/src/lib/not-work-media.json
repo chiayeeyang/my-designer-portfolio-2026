@@ -1,0 +1,110 @@
+{
+  "carry-it": {
+    "images": [
+      "/images/not-work/carry-it-00.jpg",
+      "/images/not-work/carry-it-01.jpg",
+      "/images/not-work/carry-it-02.jpg",
+      "/images/not-work/carry-it-03.jpg",
+      "/images/not-work/carry-it-04.jpg",
+      "/images/not-work/carry-it-05.jpg",
+      "/images/not-work/carry-it-06.jpg",
+      "/images/not-work/carry-it-07.jpg"
+    ],
+    "videos": []
+  },
+  "hbd": {
+    "images": [
+      "/images/not-work/hbd-00.jpg",
+      "/images/not-work/hbd-01.jpg",
+      "/images/not-work/hbd-02.jpg",
+      "/images/not-work/hbd-03.jpg",
+      "/images/not-work/hbd-04.gif",
+      "/images/not-work/hbd-05.jpg",
+      "/images/not-work/hbd-06.gif",
+      "/images/not-work/hbd-07.jpg",
+      "/images/not-work/hbd-08.gif",
+      "/images/not-work/hbd-09.jpg",
+      "/images/not-work/hbd-10.gif",
+      "/images/not-work/hbd-11.jpg",
+      "/images/not-work/hbd-12.gif",
+      "/images/not-work/hbd-13.jpg",
+      "/images/not-work/hbd-14.gif",
+      "/images/not-work/hbd-15.jpg",
+      "/images/not-work/hbd-16.gif",
+      "/images/not-work/hbd-17.jpg",
+      "/images/not-work/hbd-18.gif",
+      "/images/not-work/hbd-19.jpg",
+      "/images/not-work/hbd-20.gif",
+      "/images/not-work/hbd-21.png"
+    ],
+    "videos": []
+  },
+  "typography": {
+    "images": [
+      "/images/not-work/typography-00.png",
+      "/images/not-work/typography-01.jpg"
+    ],
+    "videos": [
+      {
+        "src": "https://video.squarespace-cdn.com/content/v1/68ecf4b0200232020f827e37/28baf3e7-1733-4fd6-b047-02379f8545c9/playlist.m3u8",
+        "poster": "https://images.squarespace-cdn.com/content/v1/68ecf4b0200232020f827e37/f9a72f55-beb5-47d9-9d6a-eed2d33b9ab1/ARTIST.jpg"
+      }
+    ]
+  },
+  "wear-it": {
+    "images": [
+      "/images/not-work/wear-it-00.jpg",
+      "/images/not-work/wear-it-01.jpg",
+      "/images/not-work/wear-it-02.jpg",
+      "/images/not-work/wear-it-03.jpg",
+      "/images/not-work/wear-it-04.jpg",
+      "/images/not-work/wear-it-05.jpg",
+      "/images/not-work/wear-it-06.jpg",
+      "/images/not-work/wear-it-07.jpg"
+    ],
+    "videos": []
+  },
+  "how-to-at-home": {
+    "images": [
+      "/images/not-work/how-to-at-home-00.jpg"
+    ],
+    "videos": [
+      {
+        "src": "https://video.squarespace-cdn.com/content/v1/68ecf4b0200232020f827e37/a17432e0-b5be-49d6-996e-02b3397c344b/playlist.m3u8",
+        "poster": "https://video.squarespace-cdn.com/content/v1/68ecf4b0200232020f827e37/a17432e0-b5be-49d6-996e-02b3397c344b/thumbnail"
+      }
+    ]
+  },
+  "dinner-project": {
+    "images": [
+      "/images/not-work/dinner-project-00.jpg",
+      "/images/not-work/dinner-project-01.jpg",
+      "/images/not-work/dinner-project-02.jpg",
+      "/images/not-work/dinner-project-03.jpg",
+      "/images/not-work/dinner-project-04.jpg",
+      "/images/not-work/dinner-project-05.jpg",
+      "/images/not-work/dinner-project-06.jpg",
+      "/images/not-work/dinner-project-07.jpg",
+      "/images/not-work/dinner-project-08.jpg",
+      "/images/not-work/dinner-project-09.jpg",
+      "/images/not-work/dinner-project-10.jpg",
+      "/images/not-work/dinner-project-11.jpg",
+      "/images/not-work/dinner-project-12.jpg",
+      "/images/not-work/dinner-project-13.png",
+      "/images/not-work/dinner-project-14.jpg",
+      "/images/not-work/dinner-project-15.jpg",
+      "/images/not-work/dinner-project-16.jpg",
+      "/images/not-work/dinner-project-17.jpg",
+      "/images/not-work/dinner-project-18.jpg",
+      "/images/not-work/dinner-project-19.jpg",
+      "/images/not-work/dinner-project-20.jpg",
+      "/images/not-work/dinner-project-21.jpg",
+      "/images/not-work/dinner-project-22.png",
+      "/images/not-work/dinner-project-23.gif",
+      "/images/not-work/dinner-project-24.jpg",
+      "/images/not-work/dinner-project-25.jpg",
+      "/images/not-work/dinner-project-26.jpg"
+    ],
+    "videos": []
+  }
+}

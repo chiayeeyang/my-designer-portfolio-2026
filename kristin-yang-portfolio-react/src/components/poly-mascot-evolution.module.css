@@ -1,0 +1,6 @@
+.evolution{margin:32px 0 64px;overflow:hidden}.evolution>svg{display:block;width:min(100%,540px);height:auto;margin:auto;overflow:hidden}.pencil{fill:none;stroke:#685952;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;animation:pencilPhase 16s infinite both}.pencil path{stroke-dasharray:1000;stroke-dashoffset:1000;animation:pencilDraw 16s var(--stroke-delay) infinite both}.sketch{animation:sketchPhase 16s infinite both}.digital{animation:digitalPhase 16s infinite both}.evolution *{animation-play-state:paused!important}.evolution[data-playing='true'] *{animation-play-state:running!important}
+@keyframes pencilDraw{0%{stroke-dashoffset:1000}25%,86%{stroke-dashoffset:0}100%{stroke-dashoffset:1000}}
+@keyframes pencilPhase{0%,29%{opacity:1}43%,94%{opacity:0}100%{opacity:1}}
+@keyframes sketchPhase{0%,26%{opacity:0}39%,51%{opacity:1}65%,100%{opacity:0}}
+@keyframes digitalPhase{0%,53%{opacity:0}67%,91%{opacity:1}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.evolution *{animation:none!important}.pencil,.sketch{display:none}.digital{opacity:1}}
