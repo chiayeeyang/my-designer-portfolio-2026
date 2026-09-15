@@ -10,7 +10,7 @@ const colors = [{ name: 'Brand / Primary', hex: '#F28888', token: '--poly-coral'
 export default function PolyDesignSystem() {
     const [sample, setSample] = useState('Care that feels human.');
     return <div className={styles.spec}>
-  <header className={styles.header}><span className={styles.label}>POLY HEALTH / DESIGN SYSTEM</span><h2>A system built around care.</h2><p>Warm color, expressive type, and consistent spacing create an approachable interface.</p></header>
+  <header className={styles.header}><span className="eyebrow">POLY HEALTH / DESIGN SYSTEM</span><h2>A system built around care.</h2><p>Warm color, expressive type, and consistent spacing create an approachable interface.</p></header>
   <section className={styles.block} aria-labelledby="type-spec"><div className={styles.sectionTitle}><h3 id="type-spec">01 / Typography</h3><span>SIZE / WEIGHT / TRACKING / LINE HEIGHT</span></div>
    <label className={styles.inputLabel}>Preview text<input value={sample} onChange={e => setSample(e.target.value)} maxLength={100} placeholder="Type to preview the scale"/></label>
    <div className={styles.typeTable}>{types.map(type => <div className={styles.typeRow} key={type.name}><div><h4>{type.name}</h4><code>{type.family}<br />{type.css}</code></div><div className={`${styles.preview} ${styles[type.className]}`}>{sample || 'Care that feels human.'}</div></div>)}</div>

@@ -1,0 +1,193 @@
+{
+  "source": "Poly App_medium.pdf",
+  "scale": 3,
+  "screens": {
+    "home": {
+      "page": 17,
+      "size": [
+        414.0,
+        2118.0
+      ],
+      "pixels": [
+        1242,
+        6354
+      ]
+    },
+    "rewards": {
+      "page": 9,
+      "size": [
+        414.0,
+        1143.0
+      ],
+      "pixels": [
+        1242,
+        3429
+      ]
+    },
+    "input": {
+      "page": 18,
+      "size": [
+        348.0,
+        382.0
+      ],
+      "pixels": [
+        1044,
+        1146
+      ]
+    },
+    "reward-water": {
+      "page": 1,
+      "size": [
+        180.0,
+        178.0
+      ],
+      "pixels": [
+        540,
+        534
+      ]
+    },
+    "reward-active": {
+      "page": 2,
+      "size": [
+        180.0,
+        178.0
+      ],
+      "pixels": [
+        540,
+        534
+      ]
+    },
+    "reward-recipes": {
+      "page": 3,
+      "size": [
+        180.0,
+        178.0
+      ],
+      "pixels": [
+        540,
+        534
+      ]
+    },
+    "meal": {
+      "page": 44,
+      "size": [
+        414.0,
+        1146.0
+      ],
+      "pixels": [
+        1242,
+        3438
+      ]
+    },
+    "nutrition": {
+      "page": 50,
+      "size": [
+        414.0,
+        1493.0
+      ],
+      "pixels": [
+        1242,
+        4479
+      ]
+    },
+    "onboarding-diet": {
+      "page": 11,
+      "size": [
+        414.0,
+        896.0
+      ],
+      "pixels": [
+        1242,
+        2688
+      ]
+    },
+    "onboarding-insights": {
+      "page": 12,
+      "size": [
+        414.0,
+        896.0
+      ],
+      "pixels": [
+        1242,
+        2688
+      ]
+    },
+    "onboarding-community": {
+      "page": 13,
+      "size": [
+        414.0,
+        896.0
+      ],
+      "pixels": [
+        1242,
+        2688
+      ]
+    },
+    "register": {
+      "page": 14,
+      "size": [
+        414.0,
+        896.0
+      ],
+      "pixels": [
+        1242,
+        2688
+      ]
+    },
+    "login": {
+      "page": 15,
+      "size": [
+        414.0,
+        896.0
+      ],
+      "pixels": [
+        1242,
+        2688
+      ]
+    },
+    "recipes": {
+      "page": 59,
+      "size": [
+        414.0,
+        2367.0
+      ],
+      "pixels": [
+        1242,
+        7101
+      ]
+    },
+    "community": {
+      "page": 69,
+      "size": [
+        414.0,
+        2453.0
+      ],
+      "pixels": [
+        1242,
+        7359
+      ]
+    },
+    "article-sleep": {
+      "page": 36,
+      "size": [
+        414.0,
+        2683.095703125
+      ],
+      "pixels": [
+        1242,
+        8050
+      ]
+    },
+    "insights": {
+      "page": 35,
+      "size": [
+        414.0,
+        2137.0
+      ],
+      "pixels": [
+        1242,
+        6411
+      ]
+    }
+  }
+}
