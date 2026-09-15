@@ -20,11 +20,11 @@ export function asDesignBrief(p) {
     const goals = p.id === '01' ? section('direction') : p.id === '02' ? section('goals') : { id: 'goals', label: 'Goals', title: 'Reduce waste through practical, playful participation.', points: [{ title: 'Reduce food waste', text: 'Make packing leftovers easier.' }, { title: 'Introduce food sharing', text: 'Build awareness of food-sharing platforms.' }, { title: 'Encourage takeaway habits', text: 'Combine empathy, function, and gamification.' }] };
     const brief = [
         { ...section('context'), label: p.id === '01' ? 'Overview' : 'Project overview' },
-        { id: 'requirements', label: 'Requirements & deliverables', title: 'What the project needed to deliver.', points: requirements },
+        { id: 'requirements', label: 'Requirements & deliverables', title: p.id === '01' ? 'Requirement and Deliverables' : 'What the project needed to deliver.', points: requirements },
         { id: 'audience', label: 'Target audience', title: 'Who the experience is for.', body: [audience] },
         { id: 'competitors', label: 'Competitor analysis', title: 'The surrounding landscape.', body: [market] },
         { ...goals, id: 'objectives', label: 'Goals & objectives' },
-        { id: 'resources', label: 'Budget & timeline', title: 'Project parameters.', points: [{ title: 'Timeline', text: `${p.duration} · ${p.year}.` }, { title: 'Budget', text: 'Not specified in the original project.' }, ...(p.tools ? [{ title: 'Tools', text: p.tools }] : [])] },
+        { id: 'resources', label: 'Budget & timeline', title: 'Project parameters.', points: [{ title: 'Timeline', text: `${p.duration} · ${p.year}.` }, { title: 'Budget', text: p.budget || 'Not specified in the original project.' }, ...(p.tools ? [{ title: 'Tools', text: p.tools }] : [])] },
         ...p.sections.filter(s => !['context', 'direction', 'goals', 'audience'].includes(s.id))
     ];
     return { ...p, sections: p.id === '01' ? brief.filter(section => section.id !== 'resources') : brief };

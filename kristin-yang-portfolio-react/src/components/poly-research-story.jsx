@@ -2,7 +2,7 @@ import styles from './poly-research-story.module.css';
 export default function PolyResearchStory() {
     return <div className={styles.story}>
  <section className="editorial-section" id="research">
-  <div className="eyebrow">IDENTIFY THE PROBLEM</div><h2>Identifying the gaps.</h2>
+  <h2>Identifying the gaps.</h2>
   <p>The interview and survey focused on women aged 20–35, as PCOS is common during the reproductive years.</p>
   <div className={styles.sample} aria-label="Interview sample: 40 participants">
    <div className={styles.sampleTotal}><span className={styles.microLabel}>INTERVIEW SAMPLE</span><strong>40</strong><span>participants</span></div>
@@ -53,18 +53,18 @@ export default function PolyResearchStory() {
   </div>
   <div className={styles.conclusion}><span className="eyebrow">WHAT EMILY NEEDS</span><h3>Clear guidance she can put into practice.</h3><p>Understandable PCOS information, recipes with ingredient explanations, and <span className={styles.blueUnderline}>manageable lifestyle steps</span>—with a clear route to professional support.</p></div>
  </section>
- <section className={`editorial-section ${styles.persona}`} id="maya-persona">
-  <div className="eyebrow">USER PERSONA</div><h2>Maya: managing PCOS on her own terms.</h2>
+ <section className={`editorial-section ${styles.persona}`} id="hazel-persona">
+  <div className="eyebrow">USER PERSONA</div><h2>Hazel: managing PCOS on her own terms.</h2>
   <div className={styles.personaProfile}>
-   <div className={styles.personaPlaceholder} role="img" aria-label="Maya portrait placeholder"><span aria-hidden="true">M</span><small>Portrait to come</small></div>
-   <div><span className={styles.microLabel}>EIGHT YEARS SINCE DIAGNOSIS · EXPERIENCED IN SELF-MANAGEMENT</span><h3>Maya</h3><p className={styles.personaMeta}>27 years old · London · PhD student</p><p>Diagnosed in college after years of irregular cycles dismissed as stress, Maya has since seen four doctors and tried birth control, metformin, and supplements, with limited or short-lived benefits. She now thinks in terms of managing PCOS, rather than fixing it.</p></div>
+   <img className={styles.portrait} src="/images/poly-hazel.png" alt="Hazel waving, with a speech bubble saying Hi! I’m Hazel!" width="2048" height="2048" loading="lazy"/>
+   <div><span className={styles.microLabel}>EIGHT YEARS SINCE DIAGNOSIS · EXPERIENCED IN SELF-MANAGEMENT</span><h3>Hazel</h3><p className={styles.personaMeta}>27 years old · London · PhD student</p><p>Diagnosed in college after years of irregular cycles dismissed as stress, Hazel has since seen four doctors and tried birth control, metformin, and supplements, with limited or short-lived benefits. She now thinks in terms of managing PCOS, rather than fixing it.</p></div>
   </div>
   <div className={styles.personaDetails}>
    <div><h3>Goals</h3><ul className={styles.bullets}><li>Understand her body's patterns without needing a medical degree.</li><li>Find a community that listens without defaulting to diet tips.</li><li>Feel that everyday choices matter, even without a finish line.</li></ul></div>
    <div><h3>Frustrations</h3><ul className={styles.bullets}><li>Content implying PCOS is reversible if she tries hard enough.</li><li>Generic wellness apps that overlook hormonal conditions.</li><li>Online communities shaped by misinformation and diet culture.</li></ul></div>
   </div>
-  <div className={styles.conclusion}><span className="eyebrow">WHAT MAYA NEEDS</span><h3>Accurate support without pressure to “fix” herself.</h3><ul className={styles.bullets}><li>Realistic information that does not oversell outcomes.</li><li>A tone that values chronic management as a worthwhile goal.</li><li>Space to track symptoms and patterns without feeling judged.</li></ul></div>
-  <p className={styles.decision}><span>Design implication</span>Respect her lived experience. Use “<span className={styles.blueUnderline}>understand</span>” and “<span className={styles.blueUnderline}>manage</span>,” acknowledge her symptoms, and avoid promises to “heal,” “fix,” or “reverse” PCOS. Make tracking a tool for learning, not a score of how well she is coping.</p>
+  <div className={styles.conclusion}><span className="eyebrow">WHAT HAZEL NEEDS</span><h3>Accurate support without pressure to “fix” herself.</h3><ul className={styles.bullets}><li>Realistic information that does not oversell outcomes.</li><li>A tone that values chronic management as a worthwhile goal.</li><li>Space to track symptoms and patterns without feeling judged.</li></ul></div>
+  <div className={styles.decision}><span className={styles.decisionLabel}>Design implication</span><p>Hazel isn't looking for hope in the form of a cure narrative — that language will read as either naive or condescending to her. She's looking for a platform that respects her expertise about her own lived experience while still offering real information. Anything that leans on "heal," "fix," or "reverse" language risks losing her trust immediately; anything that leans on "understand," "manage," and "you're not imagining this" is more likely to land.</p></div>
  </section>
     </div>;
 }
