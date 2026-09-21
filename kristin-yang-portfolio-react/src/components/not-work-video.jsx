@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 export default function NotWorkVideo({ src, poster, label, original }) { const ref = useRef(null); const [failed, setFailed] = useState(false); useEffect(() => { const video = ref.current; if (!video)
-    return; let cancelled = false; let dispose = () => { }; if (video.canPlayType('application/vnd.apple.mpegurl'))
+    return; let cancelled = false; let dispose = () => { }; if (/\.mp4(?:$|\?)/i.test(src) || video.canPlayType('application/vnd.apple.mpegurl'))
     video.src = src;
 else
     import('hls.js').then(({ default: Hls }) => { if (cancelled)
