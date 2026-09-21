@@ -2,7 +2,7 @@ import styles from './leftover-research.module.css';
 const base = '/images/leftover-research/';
 export function LeftoverObservations() {
   return <div className={styles.observations}>
-    {[1, 2].map((n) => <figure key={n}><a href={`${base}observation-${n}.jpg`} target="_blank" rel="noreferrer"><img src={`${base}observation-${n}.jpg`} alt={n === 1 ? 'Documenting discarded food and packaging during campus field research' : 'Examining a bin during food-waste field research'} loading="lazy" /></a><figcaption>{n === 1 ? 'Documenting what was discarded' : 'Looking more closely at campus waste'}</figcaption></figure>)}
+    {[1, 2].map((n) => <figure key={n}><a href={`${base}observation-${n}.jpg`} target="_blank" rel="noreferrer"><img src={`${base}observation-${n}.jpg`} alt={n === 1 ? 'Documenting discarded food and packaging during campus field research' : 'Examining a bin during food-waste field research'} loading="lazy" /></a></figure>)}
   </div>;
 }
 function PollBar({ label, discounted, fresh }) {
@@ -24,9 +24,9 @@ function Split({ left, right, value, dataBase }) {
 }
 export function LeftoverSurvey() {
   return <div className={styles.survey}>
-    <span className={styles.eyebrow}>Instagram survey / findings</span>
-    <h3>A lower price divided opinion.</h3>
-    <p>Would you buy the same food just past its best-before date at a reduced price, or fresh at its original price?</p>
+    <div className="eyebrow">INSTAGRAM SURVEY / FINDINGS</div>
+    <p>An Instagram questionnaire explored attitudes toward leftovers, food-sharing platforms, and food nearing expiration. The recorded price-preference poll was closely split; the other prompts explored habits, trust, awareness, and empathy.</p>
+    <h3>Would you buy the same food just past its best-before date at a reduced price, or fresh at its original price?</h3>
     <div className={styles.legend}><span><i />Past best-before · reduced price</span><span><i />Fresh · original price</span></div>
     <PollBar label="Data base: 150 participants" discounted={48} fresh={52} />
     <div className={styles.question}>
@@ -35,13 +35,13 @@ export function LeftoverSurvey() {
     </div>
     <div className={styles.question}>
       <h3>How comfortable are you sharing or receiving food from strangers?</h3>
+      <p className={styles.note}>Data base: 150 participants</p>
       <div className={styles.scale} role="img" aria-label="Comfort scale: 75% of the way from I'm ok with that toward unlikely"><div className={styles.scaleTrack}><span className={styles.marker}><b>75%</b></span></div><div className={styles.scaleLabels}><span>I'm ok with that</span><span>Unlikely</span></div></div>
     </div>
     <div className={styles.question}>
       <h3>What concerns do you have about food-sharing platforms?</h3>
-      <p className={styles.note}>Themes from 10 visible written responses. A response can mention more than one theme.</p>
-      <Bars total={10} unit="mentions" rows={[["Hygiene & cleanliness",7],["Safety & health",2],["Pricing honesty",1],["All concerns / unspecified",1]]} />
-      <details className={styles.sources}><summary>How responses were grouped</summary><ul><li>Hygiene & cleanliness: cleanliness, hygiene (twice), COVID and germs, sanitation and saliva, cleanliness and pricing honesty, COVID and hygiene.</li><li>Safety & health: safety; health and food security.</li><li>Pricing honesty: the response mentioning cleanliness and inaccurate pricing.</li><li>All concerns / unspecified: “All”.</li></ul></details>
+      <p className={styles.note}>Themes from 30 visible written responses. A response can mention more than one theme.</p>
+      <Bars total={30} unit="mentions" rows={[["Hygiene & cleanliness",15],["Safety & health",7],["Pricing honesty",5],["All concerns / unspecified",3]]} />
     </div>
     <div className={styles.question}>
       <h3>What is the annual value of food wasted globally?</h3>

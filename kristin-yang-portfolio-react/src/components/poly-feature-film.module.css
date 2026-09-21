@@ -1,0 +1,83 @@
+.film{color:#493a35;font-family:'Poly Outfit',Arial,sans-serif;container-type:inline-size;margin:20px 0 30px;background:transparent}
+.toolbar{display:flex;justify-content:flex-end;padding:0 5%;margin-bottom:12px}.toolbar button{display:flex;align-items:center;gap:7px;background:none;border:0;color:#8c7068;font:12px 'Poly Outfit',Arial,sans-serif;cursor:pointer;padding:10px}.toolbar button:focus-visible{outline:2px solid #b97973;outline-offset:3px}
+.scene{padding:28px 5% 40px;overflow:hidden}.scene+.scene{margin-top:35px}.heading h3{display:inline;font:400 clamp(22px,4cqw,30px)/1.35 'Poly Outfit',Arial,sans-serif;box-shadow:inset 0 -6px #ed9693}.heading p{font-size:clamp(13px,2.2cqw,16px);line-height:1.6;margin:14px 0 0;color:#89736d;max-width:440px}
+.stage{position:relative;perspective:1600px;height:clamp(390px,94cqw,740px);margin:34px 0 0;isolation:isolate}
+.phone{position:absolute;width:34%;padding:4px;border:1px solid #86807b;border-radius:clamp(20px,4cqw,33px);background:#252322;box-shadow:inset 0 0 0 1px #fff5,9px 18px 30px #513c3524;transform-style:preserve-3d;animation:float 8s ease-in-out infinite;--tilt:-5deg}
+.screen{position:relative;aspect-ratio:414/896;overflow:hidden;border-radius:clamp(16px,3.5cqw,28px);background:#fff8ef}.screen>img{display:block;width:100%;height:auto}.speaker{position:absolute;top:7px;left:39%;height:4px;width:22%;border-radius:5px;background:#252322}.primary{left:24%;top:3%;width:39%;z-index:2}.card{position:absolute;box-shadow:5px 16px 30px #513c3522;overflow:hidden;animation:cardFloat 8s ease-in-out infinite;--tilt:6deg}.card img{display:block;width:100%;height:auto}.note{position:absolute;bottom:2%;left:9%;font:400 clamp(17px,3.4cqw,26px)/1.4 'Poly Arima',Georgia,serif;max-width:68%;z-index:4;color:#755b52}.scroll{animation:screenScroll 14s cubic-bezier(.45,0,.25,1) infinite}
+.cropCard{position:absolute;overflow:hidden;background:#fff;border-radius:12px;box-shadow:4px 14px 28px #513c3520;animation:cardFloat 8s ease-in-out infinite;--tilt:5deg}.cropCard img{display:block;position:absolute;width:119%;max-width:none;left:-8%}.nutrients{box-shadow:5px 18px 32px #513c3540,0 4px 10px #513c3518;width:42%;aspect-ratio:344/288;right:0;top:36%;z-index:3}.nutrients img{width:120.349%;left:-10.175%;top:-196.181%}
+.home{isolation:isolate}.home .note{left:0;width:100%;max-width:none;text-align:center}.menuPanel{left:0;top:14%;width:32%;z-index:1;border-radius:12px;--tilt:-7deg;animation-delay:-2s}.inputPanel{right:0;top:3%;width:36%;z-index:1;border-radius:12px;--tilt:4deg;animation:inputSlide 1.2s cubic-bezier(.2,.75,.25,1) both,cardFloat 8s 1.2s ease-in-out infinite}
+@keyframes inputSlide{from{translate:100cqw 0;opacity:0}to{translate:0 0;opacity:1}}
+.meal{display:flex;align-items:center;gap:4%;height:clamp(290px,65cqw,530px);margin-top:30px}.step{width:30.666%;position:relative;animation:stepLift 30s ease-in-out infinite}.step:nth-child(2){animation-delay:-20s}.step:nth-child(3){animation-delay:-10s}.stepPhone{position:relative;width:100%;animation:none;transform:none;border-radius:22px;padding:3px}.stepPhone .screen{border-radius:18px}.step>span{display:block;font-size:clamp(10px,1.8cqw,13px);line-height:1.5;margin-top:20px;text-align:center;color:#896a60}.step .scroll{animation:mealReviewScroll 30s cubic-bezier(.45,0,.25,1) infinite}
+.rewardBadge{width:36%;right:0;top:25%;border-radius:18%;z-index:3}.rewards .primary{left:32%;width:39%}.rewards .note{left:0;bottom:0;width:100%;max-width:none;text-align:center}
+.backPhone{left:6%;top:4%;width:36%;--tilt:-7deg;animation-delay:-2s;z-index:1}.frontPhone{left:44%;top:13%;width:35%;--tilt:5deg;z-index:2}.ingredients{right:-2%;top:47%;width:32%;height:45%;--tilt:8deg;z-index:3;border-radius:10px}.ingredients img{width:100%}.recipes .stage{margin-bottom:15px}.saved{width:27%;right:0;top:4%;z-index:3;--tilt:-6deg;border-radius:15px;animation:articleSavedPop 14s ease-in-out infinite}.followed{width:30%;right:0;top:6%;z-index:3;--tilt:8deg;border-radius:15px}
+.scene[data-running=false] *{animation-play-state:paused!important}
+@keyframes float{0%,100%{transform:translateY(0) rotate(var(--tilt)) rotateY(-7deg)}50%{transform:translateY(-10px) rotate(calc(var(--tilt) + 2deg)) rotateY(2deg)}}
+@keyframes cardFloat{0%,100%{transform:translateY(0) rotate(var(--tilt))}50%{transform:translateY(-12px) rotate(calc(var(--tilt) - 3deg))}}
+@keyframes screenScroll{0%,18%,100%{transform:translateY(var(--start,0%))}65%,86%{transform:translateY(var(--travel))}}
+@keyframes stepLift{0%,28%{transform:translateY(-9px);filter:drop-shadow(0 8px 8px #c17e7620)}34%,94%{transform:translateY(6px);filter:none}100%{transform:translateY(-9px)}}
+@container(max-width:420px){.scene{padding-left:3%;padding-right:3%}.stage{height:340px}.primary{width:43%;left:20%}.note{font-size:17px}.meal{height:300px;gap:3%}.step{width:31.33%}.stepPhone{border-radius:15px;padding:2px}.stepPhone .screen{border-radius:12px}.speaker{height:3px;top:5px}.frontPhone,.backPhone{width:39%}.frontPhone{left:44%}.step>span{font-size:10px}.rewardBadge{width:39%}}
+@media(prefers-reduced-motion:reduce){.scene *{animation:none!important}.phone{transform:rotate(var(--tilt))}.stepPhone{transform:none}.card{transform:rotate(var(--tilt))}}
+
+.fixedNavigation{position:absolute;bottom:0;left:0;width:100%;aspect-ratio:414/91;z-index:2;pointer-events:none}.fixedNavigation img{display:block;position:absolute;width:109.662%;max-width:none;height:auto;left:-4.831%;top:-21.978%}
+
+.scrollViewport{position:absolute;top:9.1518%;bottom:10.15625%;left:0;width:100%;overflow:hidden}.scrollViewport>img{display:block;width:100%;height:auto}.fixedTopNavigation{position:absolute;top:0;left:0;width:100%;z-index:2;pointer-events:none}.fixedTopNavigation img{display:block;width:100%;height:auto}
+
+/* A single timeline demonstrates Add meal → Dinner → photo selection. */
+.mealStart{position:absolute;inset:0;background:#e8b5ac;animation:mealStart 30s linear infinite;pointer-events:none}
+.mealHomeCrop{position:absolute;left:0;top:9.1518%;width:100%;height:80.692%}
+.mealChooser{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;background:#493a3540;opacity:0;animation:mealChooser 30s ease-in-out infinite}
+.mealChooserCard{position:relative;width:88%;filter:drop-shadow(0 8px 12px #493a352b)}
+.mealChooserCard>img{display:block;width:100%;height:auto}
+.addMealTap,.dinnerTap{position:absolute;width:12%;aspect-ratio:1;border:2px solid #fff;border-radius:50%;background:#dd7f8470;box-shadow:0 0 0 3px #de85864d;opacity:0;transform:translate(-50%,-50%) scale(.65)}
+.addMealTap{left:82.5%;top:48.6%;z-index:3;animation:addMealTap 30s ease-out infinite}
+.dinnerTap{left:79.2%;top:24%;animation:dinnerTap 30s ease-out infinite}
+@keyframes mealStart{0%,18%{opacity:1}20%,98%{opacity:0}100%{opacity:1}}
+@keyframes mealChooser{0%,8%{opacity:0;transform:translateY(10px)}10%,18%{opacity:1;transform:translateY(0)}20%,100%{opacity:0;transform:translateY(0)}}
+@keyframes addMealTap{0%,5%,9%,100%{opacity:0;transform:translate(-50%,-50%) scale(.65)}6.5%{opacity:1;transform:translate(-50%,-50%) scale(.8)}8%{opacity:0;transform:translate(-50%,-50%) scale(1.4)}}
+@keyframes dinnerTap{0%,14%,19%,100%{opacity:0;transform:translate(-50%,-50%) scale(.65)}15.5%{opacity:1;transform:translate(-50%,-50%) scale(.8)}17.5%{opacity:0;transform:translate(-50%,-50%) scale(1.4)}}
+@media(prefers-reduced-motion:reduce){.mealStart{display:none}}
+
+.nutrientEntry{position:absolute;inset:0;pointer-events:none;background:#fff8ef;animation:nutrientEntry 30s linear infinite}
+.nutrientEntry>img,.manualSheet>img{display:block;width:100%;height:auto}
+.manualSheet{position:absolute;bottom:0;left:0;width:100%;transform:translateY(105%);animation:manualSheet 30s cubic-bezier(.22,.75,.25,1) infinite;filter:drop-shadow(0 -5px 10px #493a3530)}
+.manualTap,.saveTap{position:absolute;width:12%;aspect-ratio:1;border:2px solid #fff;border-radius:50%;background:#dd7f8470;box-shadow:0 0 0 3px #de85864d;opacity:0;transform:translate(-50%,-50%) scale(.65)}
+.manualTap{left:18%;top:55%;animation:manualEntryTap 30s ease-out infinite}
+.saveTap{left:88.5%;top:4%;animation:manualSaveTap 30s ease-out infinite}
+@keyframes nutrientEntry{0%,54%{opacity:1}55%,98%{opacity:0}100%{opacity:1}}
+@keyframes manualSheet{0%,41%{transform:translateY(105%)}44%,51%{transform:translateY(0)}54%,100%{transform:translateY(105%)}}
+@media(prefers-reduced-motion:reduce){.nutrientEntry{display:none}.home .scroll{transform:translateY(var(--start))}}
+
+/* Scroll the accomplishment list, greet at the bottom, then return to the top. */
+.rewardPhone .screen>img:first-child{animation:accomplishmentScroll 16s cubic-bezier(.45,0,.25,1) infinite}
+.rewardHeader{position:absolute;top:0;left:0;width:100%;height:auto;z-index:3;pointer-events:none}
+.rewardPhone .screen>.rewardMascot{position:absolute;right:-8%;bottom:-1%;width:110%;height:auto;max-width:none;z-index:2;opacity:0;transform:translateX(110%);animation:accomplishmentMascot 16s cubic-bezier(.22,.75,.25,1) infinite;pointer-events:none}
+@keyframes accomplishmentScroll{0%,15%,94%,100%{transform:translateY(0)}48%,78%{transform:translateY(-21.6098%)}}
+@keyframes accomplishmentMascot{0%,49%,78%,100%{opacity:0;transform:translateX(110%)}57%,70%{opacity:1;transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.rewardPhone .screen>img:first-child{transform:none}.rewardPhone .screen>.rewardMascot{display:none}}
+.rewardPhone .speaker{z-index:4}
+
+.rewards .rewardBadge{width:30%;animation:rewardWaterReveal 16s ease-in-out infinite}
+.rewardRecipes,.rewardWorkout{left:0;width:30%;border-radius:12%;z-index:3;opacity:0;transform:translateX(-18px) scale(.96)}
+.rewardRecipes{left:5%;top:14%;--tilt:-6deg;animation:rewardRecipesReveal 16s ease-in-out infinite}
+.rewardWorkout{top:48%;--tilt:5deg;animation:rewardWorkoutReveal 16s ease-in-out infinite}
+@keyframes rewardWaterReveal{0%,2%,100%{opacity:0;transform:translateY(12px) rotate(6deg) scale(.65)}3.5%{opacity:1;transform:translateY(-3px) rotate(6deg) scale(1.07)}5%,92%{opacity:1;transform:translateY(0) rotate(6deg) scale(1)}98%{opacity:0;transform:translateY(4px) rotate(6deg) scale(.94)}}
+@keyframes rewardRecipesReveal{0%,8%,100%{opacity:0;transform:translateY(12px) rotate(-6deg) scale(.65)}9.5%{opacity:1;transform:translateY(-3px) rotate(-6deg) scale(1.07)}11%,92%{opacity:1;transform:translateY(0) rotate(-6deg) scale(1)}98%{opacity:0;transform:translateY(4px) rotate(-6deg) scale(.94)}}
+@keyframes rewardWorkoutReveal{0%,14%,100%{opacity:0;transform:translateY(12px) rotate(5deg) scale(.65)}15.5%{opacity:1;transform:translateY(-3px) rotate(5deg) scale(1.07)}17%,92%{opacity:1;transform:translateY(0) rotate(5deg) scale(1)}98%{opacity:0;transform:translateY(4px) rotate(5deg) scale(.94)}}
+@media(prefers-reduced-motion:reduce){.rewardRecipes,.rewardWorkout,.rewards .rewardBadge{opacity:1;transform:rotate(var(--tilt))}}
+
+@keyframes manualEntryTap{0%,38%,42%,100%{opacity:0;transform:translate(-50%,-50%) scale(.65)}39.5%{opacity:1;transform:translate(-50%,-50%) scale(.8)}41%{opacity:0;transform:translate(-50%,-50%) scale(1.4)}}
+@keyframes manualSaveTap{0%,47%,52%,100%{opacity:0;transform:translate(-50%,-50%) scale(.65)}48.5%{opacity:1;transform:translate(-50%,-50%) scale(.8)}50.5%{opacity:0;transform:translate(-50%,-50%) scale(1.4)}}
+@keyframes mealReviewScroll{0%,68%,100%{transform:translateY(0)}88%,96%{transform:translateY(var(--travel))}}
+
+.communityFeed .scroll{animation-duration:22s}
+.communityFeed .speaker{z-index:3}
+.staticPhone{animation:none;transform:rotate(5deg)}
+.messageBar{position:absolute;left:0;bottom:0;width:100%;height:auto;aspect-ratio:414/91;display:block;overflow:hidden;z-index:2;pointer-events:none}
+
+@keyframes articleSavedPop{0%,22%,100%{opacity:0;transform:translateY(14px) rotate(-6deg) scale(.65)}25%{opacity:1;transform:translateY(-3px) rotate(-6deg) scale(1.07)}28%,88%{opacity:1;transform:translateY(0) rotate(-6deg) scale(1)}94%{opacity:0;transform:translateY(5px) rotate(-6deg) scale(.94)}}
+
+.centeredNote{left:0;width:100%;max-width:none;text-align:center}
+
+.professionalSupport{right:0;top:60%;width:42%;z-index:4;border-radius:clamp(8px,1.8cqw,16px);background:#fff;box-shadow:0 12px 30px #493a3526;transform-origin:center;animation:professionalSupportPop 22s ease-in-out infinite}
+@keyframes professionalSupportPop{0%,60.4545%,86%,100%{opacity:0;transform:translateY(12px) scale(.9)}63.4545%{opacity:1;transform:translateY(-2px) scale(1.025)}65.4545%,82%{opacity:1;transform:translateY(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){.professionalSupport{animation:none;opacity:1;transform:none}}

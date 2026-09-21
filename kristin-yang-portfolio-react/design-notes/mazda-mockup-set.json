@@ -1,0 +1,55 @@
+{
+  "mode": "Built-in image generation",
+  "prompts": [
+    {
+      "name": "book-overhead",
+      "prompt": "Use case: product-mockup. Create ONE landscape 3:2 professional photorealistic product photograph, not a collage. Image 1 is STYLE reference: preserve its warm ivory tabletop, soft window daylight, gentle foliage shadows, natural paper texture, restrained colored pencils and premium editorial photography. Remaining images are exact PRINT ART references to reproduce faithfully on the product, preserving car shapes and illustrated scenes. No added titles, labels, watermarks. Subject: only an open landscape-format children's coloring book, NO puzzle. Camera directly overhead, book slightly rotated clockwise, generous cream tabletop margin. Left page Cosmo house scene outline, right page MX-5 beach scene outline. Fine black line drawings on white uncoated paper, natural binding and page curl. A few colored pencils beside book. No hand in this shot."
+    },
+    {
+      "name": "book-angle",
+      "prompt": "Use case: product-mockup. Create ONE landscape 3:2 professional photorealistic product photograph, not a collage. Image 1 is STYLE reference: preserve its warm ivory tabletop, soft window daylight, gentle foliage shadows, natural paper texture, restrained colored pencils and premium editorial photography. Remaining images are exact PRINT ART references to reproduce faithfully on the product, preserving car shapes and illustrated scenes. No added titles, labels, watermarks. Subject: only an open landscape children's coloring book, NO puzzle. Camera low three-quarter angle from front right, emphasizing layered page edges and gently lifted upper page. Cosmo house scene black outline on left page, RX-Vision city scene black outline on right. Entire book visible on warm cream table with just two pencils nearby. No hand."
+    },
+    {
+      "name": "book-coloring",
+      "prompt": "Use case: product-mockup. Create ONE landscape 3:2 professional photorealistic product photograph, not a collage. Image 1 is STYLE reference: preserve its warm ivory tabletop, soft window daylight, gentle foliage shadows, natural paper texture, restrained colored pencils and premium editorial photography. Remaining images are exact PRINT ART references to reproduce faithfully on the product, preserving car shapes and illustrated scenes. No added titles, labels, watermarks. Subject: only an open landscape children's coloring book, NO puzzle. Camera close oblique overhead from the reader's left shoulder. Right page MX-5 beach drawing, left page Cosmo house outline. A natural human right hand enters from bottom right holding a red colored pencil, pencil tip physically touching the MX-5 car body, actively coloring it red. Only part of the car is colored with visible pencil strokes; rest remains crisp black line drawing. Anatomically natural hand with five fingers and realistic grip. A few colored pencils on ivory table. Book and coloring action are main focus."
+    },
+    {
+      "name": "puzzle-overhead",
+      "prompt": "Use case: product-mockup. Create ONE landscape 3:2 professional photorealistic product photograph, not a collage. Image 1 is STYLE reference: preserve its warm ivory tabletop, soft window daylight, gentle foliage shadows, natural paper texture, restrained colored pencils and premium editorial photography. Remaining images are exact PRINT ART references to reproduce faithfully on the product, preserving car shapes and illustrated scenes. No added titles, labels, watermarks. Subject: only a children's jigsaw puzzle featuring the exact MX-5 beach color illustration, NO book or hand. Straight overhead camera; rectangular puzzle slightly rotated counterclockwise on ivory tabletop. About 24 large interlocking pieces, subtle die-cut seams and thick cardboard edges, two edge pieces set beside their matching empty spaces. Faithful red car, balloons, palms and beach artwork, no invented scene elements. Entire puzzle in frame. Minimal props."
+    },
+    {
+      "name": "puzzle-angle",
+      "prompt": "Use case: product-mockup. Create ONE landscape 3:2 professional photorealistic product photograph, not a collage. Image 1 is STYLE reference: preserve its warm ivory tabletop, soft window daylight, gentle foliage shadows, natural paper texture, restrained colored pencils and premium editorial photography. Remaining images are exact PRINT ART references to reproduce faithfully on the product, preserving car shapes and illustrated scenes. No added titles, labels, watermarks. Subject: only a children's jigsaw puzzle featuring the exact Cosmo house color illustration, NO book or hand. Camera three-quarter oblique angle from front left, whole rectangular puzzle visible on ivory tabletop, emphasizing thick cardboard edges and tactile die-cut seams. About 24 large interlocking pieces; one loose piece beside its matching opening. White classic Cosmo, modern house, lawn, woman must match supplied artwork. Soft foliage shadow in corner, no other props."
+    },
+    {
+      "name": "puzzle-detail",
+      "prompt": "Use case: product-mockup. Create ONE landscape 3:2 professional photorealistic product photograph, not a collage. Image 1 is STYLE reference: preserve its warm ivory tabletop, soft window daylight, gentle foliage shadows, natural paper texture, restrained colored pencils and premium editorial photography. Remaining images are exact PRINT ART references to reproduce faithfully on the product, preserving car shapes and illustrated scenes. No added titles, labels, watermarks. Subject: only a children's jigsaw puzzle featuring the exact RX-Vision futuristic city color illustration, NO book or hand. Camera low three-quarter angle from front right, close but entire rectangular puzzle visible diagonally across cream table, shallow yet sufficient depth of field to see illustration. About 24 large interlocking pieces with realistic fine seams, one nearby loose piece and matching opening at far corner. Preserve red car, futuristic skyline, drone and illustrated style of supplied artwork. Subtle cardboard thickness. No extra props."
+    }
+  ],
+  "assets": [
+    {
+      "name": "book-overhead",
+      "path": "/Users/kristin/.codex/generated_images/01a0a366-05da-7280-9c10-4506cf41bff8/exec-51e3e3f0-1173-4d7a-905b-043b34b1e45e.png"
+    },
+    {
+      "name": "book-angle",
+      "path": "/Users/kristin/.codex/generated_images/01a0a366-05da-7280-9c10-4506cf41bff8/exec-81e82f66-e1bf-4d05-a659-971158ccfdbd.png"
+    },
+    {
+      "name": "book-coloring",
+      "path": "/Users/kristin/.codex/generated_images/01a0a366-05da-7280-9c10-4506cf41bff8/exec-227acc26-8f15-45a4-8d8a-bfaf5b0719f2.png"
+    },
+    {
+      "name": "puzzle-overhead",
+      "path": "/Users/kristin/.codex/generated_images/01a0a366-05da-7280-9c10-4506cf41bff8/exec-d2691198-ee63-4eca-9803-fc70c5129885.png"
+    },
+    {
+      "name": "puzzle-angle",
+      "path": "/Users/kristin/.codex/generated_images/01a0a366-05da-7280-9c10-4506cf41bff8/exec-7d5c58b4-60d2-476c-ad09-cf512d5d5987.png"
+    },
+    {
+      "name": "puzzle-detail",
+      "path": "/Users/kristin/.codex/generated_images/01a0a366-05da-7280-9c10-4506cf41bff8/exec-31b0cbf9-ad61-4946-9d15-175f862cc375.png"
+    }
+  ]
+}

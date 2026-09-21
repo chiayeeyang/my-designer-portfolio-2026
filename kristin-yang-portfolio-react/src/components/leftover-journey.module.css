@@ -1,0 +1,1 @@
+.journey{position:relative;margin:38px 0 0;padding:20px 0 12px}.artwork{display:block;width:100%;height:auto;overflow:visible}.reveal{opacity:0;transition:opacity .7s ease}.reveal[data-shown=true]{opacity:1}@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transition:none}}

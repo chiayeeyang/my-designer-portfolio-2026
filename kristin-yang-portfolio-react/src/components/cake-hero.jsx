@@ -13,6 +13,6 @@ export default function CakeHero() {
    <div className="layer-aside layer-right"><p><i>playful</i> about<br />process.</p></div>
   </div>
   <div className="layer-signature">kristin yang<span>®</span></div>
-  <div className="layers-bottom"><p>6+ years bringing research, empathy,<br />and visual craft to digital experiences.</p><a className="scroll-link" href="#work">Explore my work <span>↓</span></a></div>
+  <div className="layers-bottom"><p>Bringing research, empathy,<br />and visual communication to digital experiences.</p><a className="scroll-link" href="#work">Explore my work <span>↓</span></a></div>
  </section>;
 }

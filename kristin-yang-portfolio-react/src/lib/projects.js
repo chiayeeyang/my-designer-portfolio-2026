@@ -32,35 +32,35 @@ export const projects = [
         ]
     },
     {
-        id: '03', budget: '£50', role: 'Product Designer', title: 'Got Leftovers? All Sorted!', discipline: 'Product design', year: '2022', duration: '3 months', tools: 'Adobe Illustrator · Adobe Photoshop · Procreate · Brackets', source: 'https://yangdongdong.space/work-1/project-four-l3zw3-nsezb', intro: 'A tray liner that folds into a takeaway box and opens into a board game about reducing food waste.', question: 'How might we build empathy and thoughtfully weave in playfulness to amplify unheard voices and connect with broader audiences?',
+        id: '03', budget: '£50', role: 'Product Designer', title: 'Got Leftovers? All Sorted!', discipline: 'Product design', year: '2022', duration: '3 months', tools: 'Adobe Illustrator · Adobe Photoshop · Procreate · Visual Studio Code', source: 'https://yangdongdong.space/work-1/project-four-l3zw3-nsezb', intro: 'A tray liner that folds into a takeaway box and opens into a board game about reducing food waste.', question: 'How might we build empathy and thoughtfully weave in playfulness to amplify unheard voices and connect with broader audiences?',
         sections: [
-            { id: 'context', label: 'Context', title: 'Make taking leftovers home easier.', body: ['The project addresses food misallocation and waste through a playful, functional design for university students. A tray liner folds into a takeaway box and doubles as a Monopoly-style board game when flattened.', 'The goals were to reduce food waste, introduce food-sharing platforms, and encourage takeaway habits through empathy, function, and gamification.'] },
-            { id: 'research', label: 'Research', title: 'Start with what gets left behind.', body: ['Firsthand research through dumpster diving around campus examined what was being discarded. About a third of the observed food was still in good condition or untouched; many leftovers came from the university canteen.', 'An Instagram questionnaire explored attitudes toward leftovers, food-sharing platforms, and food nearing expiration. The recorded price-preference poll was closely split; the other prompts explored habits, trust, awareness, and empathy.'], visuals: [{ label: 'Campus food-waste observations', kind: 'leftover-observations' }, { label: 'Survey findings & target-audience analysis', kind: 'leftover-survey' }] },
+            { id: 'context', label: 'Context', title: 'Make taking leftovers home easier.', body: ['This project addresses food misallocation and waste among university students through a playful, multi-functional dining experience. The tray liner folds into a takeaway box and transforms into a Monopoly-inspired board game when flattened, extending the user journey of an otherwise disposable object.', 'A companion digital tool supports gameplay with interactive dice, cards, and a calculator. Each space on the board introduces a different approach to reducing food waste, turning everyday dining into an opportunity to discover more sustainable food habits.'] },
+            { id: 'research', label: 'Primary research', title: 'Start with what gets left behind.', body: ['Firsthand research through dumpster diving around campus examined what was being discarded. About a third of the observed food was still in good condition or untouched; many leftovers came from the university canteen.'], visuals: [{ label: 'Campus food-waste observations', kind: 'leftover-observations' }, { label: 'Survey findings & target-audience analysis', kind: 'leftover-survey' }] },
             { id: 'audience', label: 'Audience', title: 'Design for student habits.', body: ['University students were the target audience: often financially constrained, yet open to trying new things and adopting food-sharing platforms.'] },
-            { id: 'journey', label: 'User journey', title: 'Turn a tray liner into a useful next step.', points: [{ title: 'The problem', text: 'A lack of takeaway options means leftover food goes to waste.' }, { title: 'The intervention', text: 'A tray liner folds into a box, making leftovers easier to pack.' }, { title: 'The intention', text: 'Help students build waste-reducing habits naturally.' }], visuals: [{ label: 'Tray liner → takeaway box — folding sequence', ratio: 'wide' }] },
-            { id: 'prototype', label: 'Prototyping', title: 'Add a reason to engage.', body: ['Physical prototypes combined a foldable takeaway box with a Monopoly-style board, where each square introduced a sustainable solution.', 'A custom-coded online companion supported gameplay with a digital dice, chance cards, community chest cards, and a money calculator.'], visuals: [{ label: 'Physical prototypes & board-game layout', ratio: 'pair' }, { label: 'Digital companion — dice, cards & calculator', ratio: 'wide' }] },
-            { id: 'outcome', label: 'Final outcome', title: 'Function, awareness, and fun.', body: ['The final design combines a practical way to pack leftovers with a game about food waste. Board spaces introduce Too Good To Go, ShareTheMeal, and OLIO, alongside ideas for turning leftovers into new dishes.'], visuals: [{ label: 'Final tray liner, folded box & game in use', ratio: 'pair' }] },
+            { id: 'journey', label: 'User journey', title: 'Turn a tray liner into a useful next step.', points: [{ title: 'The problem', text: 'A lack of takeaway options means leftover food goes to waste.' }, { title: 'The intervention', text: 'A tray liner folds into a box, making leftovers easier to pack.' }, { title: 'The intention', text: 'Help students build waste-reducing habits naturally.' }], visuals: [{ label: 'Tray liner journey', kind: 'leftover-journey' }] },
+            { id: 'prototype', label: 'Prototyping', title: '', body: [], visuals: [{ label: 'Prototype process', kind: 'leftover-process' }] },
+            { id: 'outcome', label: 'Final outcome', title: 'Function, awareness, and fun.', body: ['The final outcome combines a multifunctional tray liner with a companion digital game experience. The printed liner folds into a takeaway box, then unfolds into a Monopoly-inspired board game that introduces surplus food platforms such as Too Good To Go, ShareTheMeal, and OLIO, alongside practical ideas for transforming leftovers into new dishes.', 'The digital component extends the physical experience, creating a connected system that blends play, education, and everyday utility.'], visuals: [{ label: 'Final liner designs and use', kind: 'leftover-outcome' }] },
         ]
     },
     {
-        id: '04', role: 'Illustrator', title: 'Mazda Kids Puzzle', discipline: 'Illustration', year: '2021', duration: '3 weeks', context: 'Client: Mazda Taiwan', tools: 'Adobe Photoshop · Adobe Illustrator', source: 'https://yangdongdong.space/work-1/mazda-wwjbl',
+        id: '04', role: 'Illustrator · Designer', title: 'Mazda Kids Puzzle', discipline: 'Illustration', year: '2021', duration: '1 month', context: 'Client: Mazda Taiwan', tools: 'Adobe Photoshop · Adobe Illustrator', source: 'https://yangdongdong.space/work-1/mazda-wwjbl',
         intro: 'A series of illustrated puzzles designed to keep children engaged and make dealership visits more comfortable for families.',
-        question: 'How can a dealership waiting area better support children and their parents?',
-        contribution: 'Commissioned illustration and design of a series of kid-friendly puzzles for Mazda Taiwan’s dealership resting areas.',
+        question: 'How can a dealership transform waiting time into a more supportive experience for families?',
+        contribution: 'Interaction design, concept development, prototyping, visual design, and experience strategy.',
         sections: [
-            { id: 'context', label: 'Project overview', title: 'A more welcoming wait.', body: ['Mazda Taiwan wanted to enhance the experience of families visiting its dealership lounges. Long waits and administrative procedures could be challenging for parents with young children.', 'I was commissioned to design a series of puzzles for the resting areas, giving children something engaging to do while supporting a smoother experience for their parents.'] },
-            { id: 'requirements', label: 'Requirements & deliverables', title: 'Bring play into the dealership.', points: [{ title: 'Format', text: 'A series of kid-friendly illustrated puzzles for dealership resting areas.' }, { title: 'Audience', text: 'Children visiting with their parents, with the wider family experience in mind.' }, { title: 'Purpose', text: 'Keep children engaged during the wait and make the showroom experience more enjoyable.' }] },
-            { id: 'resources', label: 'Budget & timeline', title: 'Project parameters.', points: [{ title: 'Client', text: 'Mazda Taiwan.' }, { title: 'Timeline', text: '3 weeks · 2021.' }, { title: 'Tools', text: 'Adobe Photoshop · Adobe Illustrator.' }, { title: 'Budget', text: 'Not specified in the original project.' }] },
-            { id: 'audience', label: 'Audience & context', title: 'Design for the family’s time together.', body: ['The brief focused on families with young children. A dealership visit involves waiting as well as decisions and paperwork; the puzzles were intended to give children an activity during that time.'] },
+            { id: 'context', label: 'Project overview', title: 'A more welcoming wait.', body: ['A family-focused dealership experience designed for Mazda to improve the waiting journey for parents and children. The project explored how underused waiting time could become more engaging through playful interactive features, including a children’s play area and puzzle-based activities, while allowing parents to focus more comfortably on the car-buying process.'] },
+            { id: 'requirements', label: 'Requirements & deliverables', title: 'Bring play into the dealership.', points: [{ title: 'Format', items: ['A series of kid-friendly illustrated puzzles for dealership resting areas.', 'Mazda vehicles coloring book.'] }, { title: 'Audience', text: 'Children visiting with their parents, with the wider family experience in mind.' }, { title: 'Purpose', text: 'Keep children engaged during the wait and make the showroom experience more enjoyable.' }] },
+            { id: 'resources', label: 'Project details', title: 'Project parameters.', points: [{ title: 'Client', text: 'Mazda Taiwan.' }, { title: 'Timeline', text: '1 month · 2021.' }, { title: 'Tools', text: 'Adobe Photoshop · Adobe Illustrator.' }] },
             { id: 'objectives', label: 'Goals & objectives', title: 'Support children. Give parents breathing room.', points: [{ title: 'Engagement', text: 'Offer a playful activity for children in the lounge.' }, { title: 'Support', text: 'Help ease the challenges parents face during longer visits.' }, { title: 'Experience', text: 'Contribute to a more family-friendly dealership environment.' }] },
-            { id: 'design', label: 'Illustration series', title: 'Mazda, through a playful lens.', body: ['The final series places Mazda vehicles within illustrated scenes, translating the automotive setting into images for children’s puzzles.'], visuals: [{ label: 'Mazda MX-5 — puzzle illustration', src: '/images/mazda-puzzle-1.jpg' }, { label: 'Mazda Cosmo — puzzle illustration', src: '/images/mazda-puzzle-2.jpg' }, { label: 'Mazda RX-Vision — puzzle illustration', src: '/images/mazda-puzzle-3.jpg' }] },
-            { id: 'outcome', label: 'Final outcome', title: 'A small activity with a wider purpose.', body: ['The project delivered a series of kid-friendly puzzle designs for Mazda Taiwan’s resting areas, with the intention of keeping children engaged and supporting their parents during dealership visits.'] },
+            { id: 'design', label: 'Illustration series', title: 'Mazda, through a playful lens.', body: ['The final series features three selected Mazda models—the MX-5, Cosmo, and RX-Vision—translated into a cohesive illustration system designed to extend across children’s activities, including puzzles and coloring books.'], visuals: [{ label: 'Mazda MX-5', src: '/images/mazda-puzzle-1.jpg' }, { label: 'Mazda Cosmo', src: '/images/mazda-puzzle-2.jpg' }, { label: 'Mazda RX-Vision', src: '/images/mazda-puzzle-3.jpg' }] },
+            { id: 'outcome', label: 'Final outcome', title: 'A small activity with a wider purpose.', body: ['The final outcome uses a shared set of illustrated Mazda vehicles across two children’s activities: puzzle collection and coloring books.', 'By reimagining the automotive setting through playful illustrations, the series creates a more engaging and cohesive experience for children during their time at the dealership.'] },
         ]
     },
     {
         "id": "05",
         "role": "Individual project",
         "title": "Code Like a Chef",
+        "tools": "Adobe Premiere Pro · iPhone 12 · Cardboard · Egg · Kitchen Appliances",
         "discipline": "Animation",
         "year": "2023",
         "duration": "2 months",
@@ -105,11 +105,8 @@ export const projects = [
                     },
                     {
                         "label": "Coding process",
+                        "hideCaption": true,
                         "src": "/images/chef-05.jpg"
-                    },
-                    {
-                        "label": "Notes on the animation format",
-                        "src": "/images/chef-06.jpg"
                     }
                 ]
             },
@@ -164,10 +161,6 @@ export const projects = [
                 ],
                 "visuals": [
                     {
-                        "label": "Cardboard code and pan — prop tests",
-                        "src": "/images/chef-11.jpg"
-                    },
-                    {
                         "label": "HTML arranged in the pan",
                         "src": "/images/chef-12.jpg"
                     }
@@ -183,6 +176,7 @@ export const projects = [
                 "visuals": [
                     {
                         "label": "Preparing the cardboard props",
+                        "hideCaption": true,
                         "src": "/images/chef-13.jpg"
                     },
                     {
@@ -202,15 +196,11 @@ export const projects = [
                         "src": "/images/chef-17.jpg"
                     },
                     {
-                        "label": "Editing the closing sequence",
-                        "src": "/images/chef-18.jpg"
-                    },
-                    {
                         "label": "Closing message — if you can cook, you can code",
                         "src": "/images/chef-19.jpg"
                     },
                     {
-                        "label": "Alternate closing composition",
+                        "label": "Applying green screen",
                         "src": "/images/chef-20.jpg"
                     }
                 ]

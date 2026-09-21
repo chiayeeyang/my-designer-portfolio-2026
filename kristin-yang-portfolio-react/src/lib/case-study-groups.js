@@ -17,12 +17,11 @@ export function caseStudyGroups(project) {
         ['Project brief', 'context', 'requirements', 'resources'],
         ['Research & insights', 'audience', 'competitors', 'research'],
         ['Design direction', 'objectives'],
-        ['User journey', 'journey'],
+        ['Solution', 'journey'],
         ['Prototyping', 'prototype'],
         ['Final outcome', 'outcome'],
     ] : project.id === '04' ? [
         ['Project brief', 'context', 'requirements', 'resources'],
-        ['Audience & context', 'audience'],
         ['Design direction', 'objectives'],
         ['Illustration series', 'design'],
         ['Final outcome', 'outcome'],
