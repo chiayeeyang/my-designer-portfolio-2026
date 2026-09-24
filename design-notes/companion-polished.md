@@ -1,0 +1,5 @@
+Mode: built-in image generation, image edit.
+
+Asset: kristin-yang-portfolio-react/public/images/leftover-process/digital-companion-polished.png
+
+Prompt: Edit target: attached original phone mockup. Use case: precise-object-edit. Polish this mockup into a professional high fidelity studio product photograph for a design portfolio. Preserve the exact three-quarter angle with left silver edge visible, classic black iPhone with round home button, and ALL original screen content and layout: yellow background, green CHANCE card fork question mark, blue COMMUNITY CHEST grocery bag card, YOUR MONEY:, 1500 red header, white calculator with rows 7 8 9 +; 4 5 6 -; 1 2 3 ×; 0 AC ÷ =, two-pip die and Roll Dice. Entire interface and whole phone must be visible. Remove the strong diagonal glare, sharpen edges and lettering, refine realistic silver metal and black glass, soft contact shadow. Clean warm off-white seamless studio backdrop, centered complete phone in landscape 3:2 composition, phone occupies 85% image height. No additional text, no props, no interface redesign.
