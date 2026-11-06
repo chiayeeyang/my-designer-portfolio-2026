@@ -19,8 +19,8 @@ export default function About() {
     <main id="main" className="about-page">
       <div className="about-page-copy">
         <header className="about-page-intro"><h1><span className="about-greeting">Hi!</span> I’m <i>Kristin.</i></h1>
-          <p>I’m a Master of Design student at UC Berkeley, with a background in graphic communication and pastry. Previously, I worked as a designer at Wunderman Thompson and a pastry chef at Corinthia London.</p>
-          <p>I’m a multidisciplinary product designer exploring how thoughtful interactions and playful details can make digital experiences feel more human.</p>
+          <p>I’m a multidisciplinary product designer curious about how everyday experiences make us feel and bring us together. My background in graphic communication and pastry has shaped the way I design: with care, a love of making, and a playful eye.</p>
+          <p>I’m currently pursuing my Master of Design (<a href="https://design.berkeley.edu/" target="_blank" rel="noreferrer">MDes</a>) at UC Berkeley. Previously, I worked as a designer at Wunderman Thompson and a pastry chef at Corinthia London, creating experiences through both visuals and food.</p>
           <div className="about-contact"><a href="mailto:kristin_yang@berkeley.edu">Email ↗</a><a href="https://www.linkedin.com/in/kcyang/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="/resume_UIUX.pdf" target="_blank" rel="noreferrer">Full résumé ↗</a></div>
         </header>
         <ResumeRows title="Experience" rows={experience} />

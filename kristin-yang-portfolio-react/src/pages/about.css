@@ -25,3 +25,6 @@
   .about-page-copy p { font-size: 16px; }
   .about-resume-row dt { font-size: 15px; }
 }
+
+.about-page-intro > p a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 4px; }
+.about-page-intro > p a:hover { color: var(--primary); text-decoration-color: currentColor; }
