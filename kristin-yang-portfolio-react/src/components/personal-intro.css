@@ -1,23 +1,16 @@
-.personal-intro { padding: clamp(105px,11vw,165px) 6% clamp(105px,11vw,165px); }
-.intro-context { font: 11px/1.5 var(--font-label); text-transform: uppercase; letter-spacing: .06em; color: var(--muted-foreground); margin-bottom: 26px; }
-.intro-context a { text-decoration: underline; text-decoration-color: #c8cdc3; text-underline-offset: 3px; transition: color .2s, text-decoration-color .2s; }
-.intro-context a:is(:hover,:focus-visible) { color: var(--primary); text-decoration-color: currentColor; }
-.personal-intro h1 { max-width: 970px; margin: 0; text-align: left; font: 400 clamp(30px,3.45vw,49px)/1.37 var(--font-ui); letter-spacing: -.03em; text-wrap: pretty; }
-.personal-intro .intro-name { font-weight: 600; font-style: normal; }
-.intro-playful { position: relative; display: inline-flex; align-items: center; gap: .17em; padding: 0 .13em .04em; margin: 0 .04em; white-space: nowrap; color: var(--primary); font-style: normal; line-height: 1.12; isolation: isolate; transition: transform .45s var(--ease-play); }
-.intro-playful::before { content: ''; position: absolute; inset: .01em -.08em -.02em; border-radius: .2em .35em .25em .3em; background: var(--play-accent); z-index: -1; transform: rotate(-3deg); transition: transform .45s var(--ease-play); }
-.intro-playful:hover { transform: translateY(-2px); }
-.intro-playful:hover::before { transform: rotate(2deg); }
-.intro-eye { width: .72em; height: .52em; overflow: visible; flex: none; }
-.intro-eye ellipse { fill: var(--background); stroke: currentColor; stroke-width: 1.5; }
-.intro-eye circle { fill: currentColor; }
-.intro-eye g { transition: transform .4s var(--ease-play); }
-.intro-playful:hover .intro-eye g { transform: translate(-4px,-1px); }
-.personal-intro-links { display: flex; gap: 28px; margin-top: 35px; color: var(--muted-foreground); font-size: 13px; }
-.personal-intro-links a { display: inline-flex; align-items: center; gap: 8px; }
-.personal-intro-links a span { transition: transform .35s var(--ease-play); }
-.personal-intro-links a:hover { color: var(--foreground); }
-.personal-intro-links a:hover span { transform: translate(2px,-2px); }
+body:has(.personal-home) { --background: #fff; background: #fff; }
+.site-header.minimal-header.home-entrance { background: #fff; padding-inline: 3%; }
+.personal-home { background: #fff; }
+.personal-intro { min-height: calc(100svh - 100px); display: flex; align-items: center; padding: 64px 5.6% clamp(145px,20vh,230px); }
+.personal-intro-content { width: 100%; }
+.personal-intro h1 { margin: 0; max-width: none; text-align: left; font: 400 clamp(30px,2.85vw,49px)/1.25 var(--font-ui); letter-spacing: -.025em; text-wrap: wrap; }
+.intro-cake { display: inline-block; width: 6em; height: auto; max-width: 100%; vertical-align: -.12em; margin-right: .18em; }
+.personal-intro-details { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-top: 30px; font-size: clamp(13px,1.2vw,20px); }
+.personal-intro .intro-context { margin: 0; font: inherit; line-height: 1.5; color: var(--foreground); text-transform: none; letter-spacing: 0; }
+.personal-intro-links { display: flex; gap: 30px; flex: none; }
+.personal-intro-details a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; transition: color .2s; }
+.personal-intro-details a:is(:hover,:focus-visible) { color: var(--primary); }
+@media(min-width:1100px) { .intro-phrase-purpose { display: block; } }
 
 .personal-home .work { padding: 0 6% 110px; }
 .personal-home .section-label { border: 0; padding: 0 0 42px; }
@@ -40,7 +33,7 @@
 .personal-home .footer-cta { font: 450 clamp(32px,4vw,56px)/1.2 var(--font-ui); letter-spacing: -.03em; margin: 0 0 55px; }
 .personal-home .footer-cta > span { color: var(--primary); }
 .personal-home .footer-bottom { border: 0; padding-top: 0; font-size: 11px; }
-@media(min-width:1700px) { .personal-intro, .personal-home .work { max-width: 1700px; margin-inline: auto; } }
+@media(min-width:1800px) { .personal-intro, .personal-home .work { max-width: 1800px; margin-inline: auto; } }
 @media(max-width:850px) {
   .personal-home .project { gap: 35px; grid-template-columns: minmax(0,1fr) minmax(0,1.25fr); }
   .personal-home .project .project-art { height: 330px; }
@@ -48,10 +41,12 @@
   .personal-home .project-caption .project-description { font-size: 17px; }
 }
 @media(max-width:600px) {
-  .personal-intro { padding: 75px 6% 85px; }
-  .intro-context { font-size: 9px; margin-bottom: 22px; }
-  .personal-intro h1 { font-size: 30px; line-height: 1.4; letter-spacing: -.03em; }
-  .personal-intro-links { margin-top: 30px; }
+  .site-header.minimal-header.home-entrance { padding-inline: 6%; }
+  .personal-intro { min-height: calc(100svh - 82px); padding: 55px 6% 105px; }
+  .personal-intro h1 { font-size: clamp(27px,6.6vw,36px); line-height: 1.35; letter-spacing: -.025em; }
+  .intro-cake { width: 5.3em; }
+  .personal-intro-details { flex-direction: column; align-items: flex-start; gap: 20px; margin-top: 26px; font-size: 13px; }
+  .personal-intro-links { gap: 24px; }
   .personal-home .work { padding-bottom: 70px; }
   .personal-home .section-label { padding-bottom: 28px; }
   .personal-home .project-grid { gap: 60px; }
@@ -66,8 +61,8 @@
   .personal-home .footer-bottom { gap: 20px; font-size: 10px; }
 }
 @media(prefers-reduced-motion:reduce) {
-  .intro-playful, .intro-playful::before, .intro-eye g, .personal-intro-links a span, .personal-home .project .project-art { transition: none; }
-  .intro-playful:hover, .personal-home .project:is(:hover,:focus-visible) .project-art { transform: none; }
+  .personal-intro-details a, .personal-home .project .project-art { transition: none; }
+  .personal-home .project:is(:hover,:focus-visible) .project-art { transform: none; }
 }
 
 .personal-home .project-locked { cursor: default; }

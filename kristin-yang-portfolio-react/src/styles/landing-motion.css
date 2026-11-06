@@ -10,7 +10,7 @@
   .home-entrance nav a:nth-child(1) { animation-delay: 2380ms; }
   .home-entrance nav a:nth-child(2) { animation-delay: 2560ms; }
   .home-entrance nav a:nth-child(3) { animation-delay: 2740ms; }
-  .personal-intro .intro-context { animation-delay: 0ms; }
+  .personal-intro .intro-context { animation-delay: 1300ms; }
   .personal-intro h1 { animation: landing-settle 1200ms var(--ease-play) 120ms backwards; }
   .intro-phrase { animation: landing-text-reveal 900ms ease-out backwards; }
   .intro-phrase-name { animation-delay: 120ms; }
