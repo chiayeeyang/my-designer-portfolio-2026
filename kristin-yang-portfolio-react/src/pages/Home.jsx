@@ -1,21 +1,51 @@
+import NmdpPreview from '@/components/nmdp-preview';
 import ChefPreview from '@/components/chef-preview';
 import LeftoversPreview from '@/components/leftovers-preview';
 import MazdaPuzzle from '@/components/mazda-puzzle';
 import PolyAppPreview from '@/components/poly-app-preview';
 import PolyPreview from '@/components/poly-preview';
 import SiteHeader from '@/components/site-header';
-import CakeHero from '@/components/cake-hero';
+import PersonalIntro from '@/components/personal-intro';
+
 const projects = [
-    { id: '01', title: 'POLY Health', type: 'Product design · UI/UX', className: 'blue' },
-    { id: '02', title: 'Poly App', type: 'Product design · UI/UX', className: 'silver' },
-    { id: '04', title: 'Mazda Kids Puzzle', type: 'Illustration · 2021', className: 'yellow' },
-    { id: '03', title: 'Got Leftovers? All Sorted!', type: 'Product design · 2022', className: 'pink' },
-    { id: '05', title: 'Code Like a Chef', type: 'Animation · 2023', className: 'ink' },
+  { id: 'nmdp', date: 'September 2026', dateTime: '2026-09', title: 'NMDP × Food Delivery', description: 'Bringing donor swab kits into everyday food pickup and delivery.', tags: ['Design research', 'UX design', 'Service design'], locked: true, className: 'navy', Preview: NmdpPreview },
+  { id: '01', date: 'May 2023', dateTime: '2023-05', title: 'POLY Health', description: 'Making PCOS education and everyday support feel more approachable.', tags: ['Product design', 'Healthcare', 'Web'], className: 'blue', Preview: PolyPreview },
+  { id: '02', date: 'June 2023', dateTime: '2023-06', title: 'Poly App', description: 'Turning health guidance into simple daily habits.', tags: ['Product design', 'Mobile', 'Interaction'], className: 'silver', Preview: PolyAppPreview },
+  { id: '04', date: 'January 2021', dateTime: '2021-01', title: 'Mazda Kids Puzzle', description: 'Illustrated puzzles that bring families into the Mazda experience.', tags: ['Illustration', 'Play', 'Brand experience'], className: 'yellow', Preview: MazdaPuzzle },
+  { id: '03', date: 'June 2022', dateTime: '2022-06', title: 'Got Leftovers? All Sorted!', description: 'Rethinking how leftover food is shared, packed, and valued.', tags: ['Product design', 'Food', 'Sustainability'], className: 'pink', Preview: LeftoversPreview },
+  { id: '05', date: 'November 2023', dateTime: '2023-11', title: 'Code Like a Chef', description: 'Explaining code through the familiar rhythm of a kitchen.', tags: ['Animation', 'Storytelling', 'Creative coding'], className: 'ink', Preview: ChefPreview },
 ];
+
 export default function Home() {
-    return <><a className="skip" href="#main">Skip to content</a><SiteHeader />
- <main id="main"><CakeHero />
- <section id="work" className="work"><div className="section-label"><h2>Selected work <sup>(05)</sup></h2><span>A little strategy. A lot of care.</span></div><div className="project-grid">{projects.map(p => <a href={`/work/${p.id}`} className={`project project-${p.id}`} key={p.id}><div className={`project-art ${p.className}`}><>{p.id === '01' ? <PolyPreview /> : p.id === '02' ? <PolyAppPreview /> : p.id === '03' ? <LeftoversPreview /> : p.id === '04' ? <MazdaPuzzle /> : p.id === '05' ? <ChefPreview /> : <span className="art-label">IMAGE PLACEHOLDER</span>}</>{p.id !== '01' && p.id !== '02' && p.id !== '03' && p.id !== '04' && p.id !== '05' && <><span className="art-number">{p.id}</span><span className="art-bottom">{p.id === '02' ? 'HUMAN-CENTERED EXPERIENCES' : 'A DIFFERENT PERSPECTIVE'}</span></>}<span className="project-open" aria-hidden="true">↗</span></div><div className="project-caption"><div><h3>{p.title}</h3><p>{p.type}</p></div>{p.id !== '05' && <span>View case study ↗</span>}</div></a>)}</div></section>
- <section className="about" id="about"><div className="eyebrow">A LITTLE ABOUT ME</div><div><h2>Hi, I’m <i>Kristin.</i></h2><p>I'm a multidisciplinary designer with 4+ years of experience across visual, brand, and UI/UX design. I combine user research, visual systems, and strategic thinking to create intuitive experiences across advertising, hospitality, and healthcare.</p><p>I trained in graphic communication and found my way into the pastry kitchen, where I discovered that design and food are shaped by the same instinct — curating how people experience and interact with the world around them. I love using design — across taste, visuals, and technology — to create moments that connect people.</p><p>Outside of designing and baking, you'll find me on the couch, at a café, or out with friends, usually with good food nearby.</p><a className="text-link" href="/resume_UIUX.pdf" target="_blank" rel="noreferrer">View my résumé ↗</a></div></section>
- <footer id="contact"><div className="eyebrow">GOOD DESIGN STARTS WITH A CONVERSATION</div><a className="footer-cta" href="mailto:chiayeeyang@gmail.com">Let’s make it <i>meaningful.</i> <span>↗</span></a><div className="footer-bottom"><span>© {new Date().getFullYear()} Kristin Yang</span><a href="mailto:chiayeeyang@gmail.com">chiayeeyang@gmail.com ↗</a><a href="#main">Back to top ↑</a></div></footer></main></>;
+  return <>
+    <a className="skip" href="#main">Skip to content</a>
+    <SiteHeader />
+    <main id="main" className="personal-home">
+      <PersonalIntro />
+      <section id="work" className="work">
+        <div className="section-label"><h2>Selected work <sup>({String(projects.length).padStart(2, '0')})</sup></h2></div>
+        <div className="project-grid">
+          {projects.map(({ Preview, ...project }, index) => {
+            const Card = project.locked ? 'article' : 'a';
+            return <Card href={project.locked ? undefined : `/work/${project.id}`} className={`project project-${project.id}${project.locked ? ' project-locked' : ''}`} key={project.id} aria-label={project.locked ? `${project.title} — work in progress` : `View ${project.title}`}>
+            <div className="project-caption">
+              <span className="project-index">{String(index + 1).padStart(2, '0')} / <time dateTime={project.dateTime}>{project.date}</time></span>
+              <h3>{project.title}</h3>
+              <p className="project-description">{project.description}</p>
+              <ul className="project-tags">{project.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
+              {project.status && <span className="project-status">{project.status}</span>}
+            </div>
+            <div className={`project-art ${project.className}`}>
+              <Preview />
+              {!project.locked && <span className="project-open" aria-hidden="true">↗</span>}
+            </div>
+          </Card>;})}
+        </div>
+      </section>
+      <footer id="contact">
+        <a className="footer-cta" href="mailto:chiayeeyang@gmail.com">Say hello. <span aria-hidden="true">↗</span></a>
+        <div className="footer-bottom"><span>© {new Date().getFullYear()} Kristin Yang</span><a href="mailto:chiayeeyang@gmail.com">chiayeeyang@gmail.com ↗</a><a href="#main">Back to top ↑</a></div>
+      </footer>
+    </main>
+  </>;
 }

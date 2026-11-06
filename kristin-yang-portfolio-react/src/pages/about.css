@@ -1,0 +1,27 @@
+.about-page { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.1fr); gap: 7%; padding: clamp(85px,9vw,145px) 6% 100px; align-items: start; }
+.about-page-intro h1 { font: 450 clamp(32px,3.5vw,48px)/1.2 var(--font-ui); letter-spacing: -.03em; margin: 0 0 30px; }
+.about-page-intro h1 i { font-family: inherit; font-style: normal; font-weight: 500; color: var(--foreground); letter-spacing: inherit; }
+.about-page-intro .about-greeting { color: var(--foreground); }
+.about-page-copy p { font-family: var(--font-ui); font-size: 17px; line-height: 1.75; letter-spacing: -.015em; color: var(--foreground); margin: 0 0 20px; max-width: 620px; }
+.about-contact { display: flex; flex-wrap: wrap; gap: 26px; font-size: 12px; margin-top: 32px; color: var(--muted-foreground); }
+.about-contact a { border: 0; padding: 0; }
+.about-contact a:hover { color: var(--primary); }
+.about-resume-section { margin-top: 54px; }
+.about-resume-section h2 { font: 10px/1.5 var(--font-label); color: var(--muted-foreground); text-transform: uppercase; letter-spacing: .08em; margin: 0 0 23px; }
+.about-resume-section dl { margin: 0; }
+.about-resume-row { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 18px; padding: 0 0 25px; font-size: 14px; line-height: 1.5; }
+.about-resume-row dt { font: 500 17px/1.5 var(--font-ui); letter-spacing: -.025em; }
+.about-resume-row dt span { display: block; font-weight: 400; color: var(--muted-foreground); margin-top: 5px; font-size: 12px; letter-spacing: 0; }
+.about-resume-row dd { margin: 0; color: var(--muted-foreground); white-space: nowrap; font: 10px/1.5 var(--font-label); padding-top: 4px; }
+.about-page-copy .about-tools { color: var(--muted-foreground); letter-spacing: 0; font-size: 12px; line-height: 1.8; }
+.about-page-footer { background: transparent; padding: 0 6% 28px; }
+.about-page-footer .footer-bottom { font-size: 11px; }
+@media(max-width:1000px) { .about-page { gap: 5%; grid-template-columns: 1.1fr 1fr; } .about-resume-row { gap: 10px; } }
+@media(max-width:700px) {
+  .about-page { display: flex; flex-direction: column; padding-top: 70px; gap: 45px; }
+  .about-page-copy { width: 100%; }
+  .about-resume-section { margin-top: 38px; }
+  .about-page-intro h1 { font-size: 34px; }
+  .about-page-copy p { font-size: 16px; }
+  .about-resume-row dt { font-size: 15px; }
+}

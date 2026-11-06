@@ -1,0 +1,47 @@
+.play-door-hero{display:grid;place-items:center;min-height:calc(100svh - 100px);padding:16px 6% 30px}
+
+.play-door-figure{margin:0;width:min(100%,600px,calc((100svh - 146px)*.667));min-width:0}
+
+.play-door-scene{position:relative;aspect-ratio:1045/1567;overflow:hidden;background:#d7d1c4;isolation:isolate;container-type:inline-size;perspective:1200px}
+.play-door-original,.play-door-plate,.play-door-leaf>img{width:100%;height:100%;object-fit:fill;display:block}
+.play-door-original{position:absolute;inset:0;z-index:2;transition:opacity .32s ease}
+.play-door-layers{position:absolute;inset:0;opacity:0;transition:opacity .32s ease}
+.play-door-interior{position:absolute;inset:0;clip-path:polygon(35.2% 30.5%,60.5% 26%,55.5% 96.5%,35.2% 87.8%);background:#171a45}
+.play-door-universe{position:absolute;left:35%;top:26%;width:26%;height:72%;background:radial-gradient(ellipse at 60% 45%,#f2a9ca,#7a7af2 48%,#14163f);overflow:hidden}
+.play-door-leaf{position:absolute;inset:0;clip-path:polygon(35.2% 30.5%,60.5% 26%,55.5% 96.5%,35.2% 87.8%);transform-origin:59% 61%;transition:transform 1.4s cubic-bezier(.2,.7,.2,1),filter 1.4s;backface-visibility:hidden}
+.play-door-person{position:absolute;left:6.4%;top:42.7%;width:60%;transform-origin:77% 29%;transition:transform 1.5s cubic-bezier(.3,0,.2,1),opacity .7s .65s;z-index:3}
+.play-door-person img{width:100%;display:block}
+.play-door-frame{position:absolute;inset:0;width:100%;height:100%;z-index:4;pointer-events:none}
+.play-doorbell{position:absolute;left:67%;top:46%;width:13%;height:27%;z-index:6;border:0;background:transparent;cursor:pointer;border-radius:8px;color:#fff}
+.play-doorbell:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.play-bell-pulse{position:absolute;left:44%;top:27%;width:20px;height:20px;border-radius:50%;border:2px solid #faf9f5;box-shadow:0 0 0 6px #244bed55;animation:play-bell-breathe 2.5s ease-in-out infinite}
+.play-bell-label{position:absolute;right:-8%;top:4%;font:italic 16px Georgia;background:#faf9f5;color:#244bed;white-space:nowrap;padding:7px 12px;transform:rotate(6deg);box-shadow:0 3px 12px #0002}
+.play-door-welcome{position:absolute;top:37%;left:52%;z-index:8;font:italic clamp(22px,7cqw,36px)/1 Georgia;color:#244bed;background:#faf9f5;padding:16px 22px;border-radius:50% 50% 50% 4%;transform:rotate(-7deg);box-shadow:0 8px 25px #0002;transition:opacity .25s}
+.play-door-welcome:empty{opacity:0;padding:0}
+.play-door-figure[data-open="true"] .play-door-original{opacity:0;pointer-events:none}
+.play-door-figure[data-open="true"] .play-door-layers{opacity:1}
+.play-door-figure[data-open="true"] .play-door-leaf{transform:perspective(900px) rotateY(-76deg);filter:brightness(.65)}
+.play-door-figure[data-phase="entering"] .play-door-person,.play-door-figure[data-phase="entered"] .play-door-person{transform:translate(21%,-9%) scale(.67);opacity:0}
+.play-door-figure:not([data-phase="idle"]) .play-bell-label,.play-door-figure:not([data-phase="idle"]) .play-bell-pulse{opacity:0;animation:none}
+
+@keyframes play-bell-breathe{0%,100%{box-shadow:0 0 0 5px #244bed55}
+50%{box-shadow:0 0 0 10px #244bed11}
+}
+
+@media(max-width:600px){
+  .play-door-hero{min-height:calc(100svh - 82px);padding:12px 6% 24px}
+
+  .play-door-figure{width:min(100%,calc((100svh - 118px)*.667))}
+
+  .play-door-welcome{font-size:25px;padding:12px 16px}
+
+}
+
+@media(prefers-reduced-motion:reduce){
+  .play-bell-pulse{animation:none}
+
+  .play-door-original,.play-door-layers,.play-door-leaf,.play-door-person,.play-door-welcome{transition:none}
+
+  .play-door-figure[data-open="true"] .play-door-leaf{visibility:hidden}
+
+}

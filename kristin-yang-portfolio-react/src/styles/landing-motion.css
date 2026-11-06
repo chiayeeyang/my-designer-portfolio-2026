@@ -1,0 +1,50 @@
+/* A single, quiet entrance. Inline phrases keep their natural responsive wrapping. */
+@media (prefers-reduced-motion: no-preference) {
+  .home-entrance .k-mark,
+  .home-entrance nav a,
+  .personal-intro .intro-context,
+  .personal-intro .personal-intro-links {
+    animation: landing-arrive 850ms var(--ease-play) backwards;
+  }
+  .home-entrance .k-mark { animation-delay: 2200ms; }
+  .home-entrance nav a:nth-child(1) { animation-delay: 2380ms; }
+  .home-entrance nav a:nth-child(2) { animation-delay: 2560ms; }
+  .home-entrance nav a:nth-child(3) { animation-delay: 2740ms; }
+  .personal-intro .intro-context { animation-delay: 0ms; }
+  .personal-intro h1 { animation: landing-settle 1200ms var(--ease-play) 120ms backwards; }
+  .intro-phrase { animation: landing-text-reveal 900ms ease-out backwards; }
+  .intro-phrase-name { animation-delay: 120ms; }
+  .intro-phrase-role { animation-delay: 360ms; }
+  .intro-phrase-purpose { animation-delay: 600ms; }
+  .intro-phrase-bridge { animation-delay: 840ms; }
+  .intro-phrase-stop { animation-delay: 1080ms; }
+  .personal-intro .intro-playful { transform-origin: 50% 75%; animation: playful-arrive 1000ms var(--ease-play) 1080ms backwards; }
+  .personal-intro .intro-eye { transform-origin: center; animation: playful-blink 750ms ease-in-out 2100ms; }
+  .personal-intro .personal-intro-links { animation-delay: 1500ms; }
+
+  /* Keyboard navigation never has to wait for the entrance. */
+  .home-entrance a:focus-visible,
+  .personal-intro .personal-intro-links:focus-within { animation: none; }
+}
+
+@keyframes landing-arrive {
+  from { opacity: 0; translate: 0 7px; }
+  to { opacity: 1; translate: 0 0; }
+}
+@keyframes landing-settle {
+  from { translate: 0 8px; }
+  to { translate: 0 0; }
+}
+@keyframes landing-text-reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes playful-arrive {
+  0% { opacity: 0; transform: translateY(7px) rotate(-3deg) scale(.95); }
+  65% { opacity: 1; transform: translateY(-2px) rotate(1deg) scale(1.025); }
+  100% { opacity: 1; transform: translateY(0) rotate(0) scale(1); }
+}
+@keyframes playful-blink {
+  0%, 38%, 100% { transform: scaleY(1); }
+  18% { transform: scaleY(.12); }
+}
