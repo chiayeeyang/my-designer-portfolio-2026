@@ -10,7 +10,7 @@ const people = [
     bio: 'Recently diagnosed with leukemia, Maya is waiting for a donor after no full match was found in her family.',
     pains: ['Not knowing when a donor will be found', 'Unfamiliar treatment information', 'Fear that a potential donor may become unavailable'],
     goals: ['Find a suitable donor', 'Understand what happens next', 'Return to everyday life with her family'],
-    background: '#faf1ed', accent: '#e8b9a7', ink: '#83513e',
+    accent: '#e8b9a7', ink: '#83513e',
   },
   {
     id: 'donor', name: 'Ethan Lee', role: 'Potential donor', age: 24, location: 'San Francisco, California',
@@ -18,7 +18,7 @@ const people = [
     bio: 'Ethan joined the registry in college. Now contacted as a possible match, he wants to help—but needs to understand the commitment.',
     pains: ['Unclear next steps and recovery time', 'Worries about pain and side effects', 'Fitting donation around work and travel'],
     goals: ['Know exactly what donation involves', 'Plan around his daily responsibilities', 'Feel confident about helping a patient'],
-    background: '#eef4f8', accent: '#b9d3e3', ink: '#45677b',
+    accent: '#b9d3e3', ink: '#45677b',
   },
   {
     id: 'caregiver', name: 'Daniel Carter', role: 'Family caregiver', age: 38, location: 'Boston, Massachusetts',
@@ -26,7 +26,7 @@ const people = [
     bio: 'As his wife prepares for a transplant, Daniel coordinates appointments, medication, and home life while trying to stay emotionally present.',
     pains: ['Too many responsibilities at once', 'Complex information and changing schedules', 'Emotional exhaustion and little time for himself'],
     goals: ['Support his wife through recovery', 'Keep care and appointments organized', 'Communicate clearly with the medical team'],
-    background: '#f0f4ec', accent: '#c6d7b9', ink: '#54684a',
+    accent: '#c6d7b9', ink: '#54684a',
   },
   {
     id: 'advocate', name: 'John Davis', role: 'Community advocate', age: 60, location: 'Boston, Massachusetts',
@@ -34,7 +34,7 @@ const people = [
     bio: 'After losing his son to blood cancer, John wants to honor his memory by sharing reliable information and encouraging eligible people to join.',
     pains: ['Mistrust shaped by past healthcare experiences', 'Uncertainty about which information to trust', 'No clear way to help beyond donating'],
     goals: ['Honor his son’s memory', 'Share credible information with his community', 'Encourage others without making them feel pressured'],
-    background: '#f3eff7', accent: '#d5c6e2', ink: '#6f557c',
+    accent: '#d5c6e2', ink: '#6f557c',
   },
 ];
 
@@ -71,7 +71,7 @@ export default function NmdpPersonas() {
     </header>
     <p id={instructionsId} className={styles.srOnly}>Swipe horizontally or use the arrow keys to explore four personas.</p>
     <div className={styles.track} ref={trackRef} tabIndex={0} aria-label="Persona profiles" aria-describedby={instructionsId} onScroll={syncSlide} onKeyDown={onKeyDown}>
-      {people.map((person, index) => <div key={person.id} className={styles.slide} role="group" aria-roledescription="slide" aria-label={`${index + 1} of 4: ${person.name}`} aria-hidden={active !== index} style={{ '--persona-background': person.background, '--persona-accent': person.accent, '--persona-ink': person.ink }}>
+      {people.map((person, index) => <div key={person.id} className={styles.slide} role="group" aria-roledescription="slide" aria-label={`${index + 1} of 4: ${person.name}`} aria-hidden={active !== index} style={{ '--persona-accent': person.accent, '--persona-ink': person.ink }}>
         <div className={styles.character}>
           <span className={styles.number} aria-hidden="true">0{index + 1}</span>
           <PersonaIllustration person={person} />

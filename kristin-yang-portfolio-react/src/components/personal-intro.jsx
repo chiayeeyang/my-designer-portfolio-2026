@@ -16,5 +16,6 @@ export default function PersonalIntro() {
         </div>
       </div>
     </div>
+    <a className="intro-explore" href="#work"><span>Explore work</span><svg width="24" height="28" viewBox="0 0 24 28" fill="none" aria-hidden="true"><path d="M12 3v21M4 16l8 8 8-8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></a>
   </section>;
 }

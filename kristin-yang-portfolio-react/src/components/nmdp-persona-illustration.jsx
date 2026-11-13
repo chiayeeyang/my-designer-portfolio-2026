@@ -38,7 +38,7 @@ function Ethan() {
     <path fill={skin} d="m125 75-2 21q14 15 28 0l-3-22Z" />
     <path fill={skin} d="M115 45q0-24 27-24t27 24v20q-5 27-29 26-25-1-25-26Z" />
     <path fill="#555d5a" d="M114 59q-12-19-1-33 9-15 30-12 21-1 28 17l-4 16q-21 0-31-15-3 18-21 15Z" />
-    <path d="m143 61 7 1m-8 14 8 1" stroke={ink} strokeWidth="2" strokeLinecap="round" />
+    <path d="M131 60h1m23 0h1m-20 14q6 5 12 0" stroke={ink} strokeWidth="2.5" fill="none" strokeLinecap="round" />
     <path fill={skin} d="m75 156-6 18q-2 9 7 11l11 2q9-3 3-10l-6-6 6-10m97-27 8-17q4-8 10-5l5 9-10 22Z" />
     <rect x="199" y="91" width="20" height="37" rx="4" fill="#7a8c97" transform="rotate(15 209 109)" />
     <path d="m207 96 7 2" stroke="#dde5e5" strokeWidth="2" strokeLinecap="round" />
@@ -57,16 +57,16 @@ function Daniel() {
     <path d="M64 236v47m96-47v47" stroke="#a0b3ac" strokeWidth="7" />
     <path fill="#a8b5c6" d="m96 190 63 9q12 2 15 15l9 55-19 2-18-43-46-3q-20-5-15-24Z" />
     <path fill="#889bad" d="m118 219 24 8-13 47-20-3Z" />
-    <path fill="#777970" d="m109 269-9 12q-3 6 8 6h25l-5-17m36-2v19h31q8-2 2-8l-17-11Z" />
+    <path fill="#777970" d="M110 269h18l2 10 9 4q3 4-4 4h-28q-8 0-5-6ZM164 268v19h31q8-2 2-8l-17-11Z" />
     <path fill="#d5b8af" d="M95 95q-21 5-23 30l8 72q25 19 60 9l-10-74 22 32 17-12-25-43q-6-11-22-15Z" />
     <path fill={skin} d="m100 77 2 22q13 12 25-2l-4-23Z" />
     <path fill={skin} d="M90 47q0-29 28-28t29 28l-3 23q-3 22-25 22-24-1-26-24Z" />
     <path fill="#62645a" d="m92 63-8-23q-3-27 27-28 25-5 35 14l1 16q-20 3-32-13-5 18-21 17Z" />
-    <path d="M126 54h2m3 15 7 1m-36 5 6 9 20 3" stroke={ink} strokeWidth="2" fill="none" strokeLinecap="round" />
+    <path d="M111 55h1m22 0h1m-18 15q6 5 12 0" stroke={ink} strokeWidth="2" fill="none" strokeLinecap="round" />
+    <path fill={skin} d="M81 146h15l4 25 45 10-3 13-51-10q-8-2-9-12Z" />
     <rect x="134" y="148" width="48" height="61" rx="5" fill="#f0e5ce" transform="rotate(14 158 178)" />
     <rect x="151" y="145" width="20" height="7" rx="3" fill="#b8c4b3" transform="rotate(14 158 178)" />
     <path d="m146 165 23 6m-26 6 24 6m-26 5 16 4" stroke="#bab397" strokeWidth="2" strokeLinecap="round" />
-    <path fill={skin} d="m162 146 11 9q7 6 2 13l-9-3-6-7-8-2m-56-9 5 24 33 8q11 4 9 11-2 7-12 4l-41-8q-9-3-10-12l-3-24Z" />
     <path d="m93 124 3 22m10-44 10 10 11-12" stroke="#a48982" strokeWidth="1.8" fill="none" />
   </>;
 }
@@ -77,6 +77,7 @@ function John() {
     <path d="M189 62h44m-44 13h28" stroke="#b5a7c6" strokeWidth="3" strokeLinecap="round" />
     <path fill="#aab6b0" d="m110 181-8 90 20 2 19-69 14 68h20l-4-91Z" />
     <path fill="#75736e" d="m103 267-12 14q-3 6 7 6h25v-17m32-3v20h31q8-2 2-8l-16-12Z" />
+    <path fill="#c69d82" d="M64 130 49 124q-9-3-12 3-4 8 3 13l25 13 11-12ZM190 133l13-14q5-6 11-3 6 4 2 10l-13 18q-5 6-12 1l-5-4Z" />
     <path fill="#a9c3c9" d="m115 90-23 12-31 30 12 16 35-22-5 65q34 11 74-2l-12-58 26 16 13-17-37-28-17-10Z" />
     <path fill="#c69d82" d="m125 73-2 23q15 14 28-1l-5-23Z" />
     <path fill="#c69d82" d="M113 40q1-23 27-23t27 23v27q-2 25-27 25t-27-25Z" />
@@ -85,7 +86,6 @@ function John() {
       <rect x="116" y="47" width="20" height="15" rx="6" /><rect x="145" y="47" width="20" height="15" rx="6" /><path d="M136 53h9m-11 22q7 4 14-1" />
       <path d="m119 96 20 20 15-18m-15 18v70m-25-47-8 43" stroke="#75969d" />
     </g>
-    <path fill="#c69d82" d="m63 132-16-7q-7-3-11 2-5 8 3 14l23 10 11-7m119-10 15-14q6-5 12 0 6 7-1 13l-17 16Z" />
     <path fill="#e7c6b7" d="m35 110 29-7 11 45-30 7Z" />
     <path d="m43 118 16-4m-14 12 16-4m-14 12 12-3" stroke="#b18d7c" strokeWidth="2" strokeLinecap="round" />
   </>;

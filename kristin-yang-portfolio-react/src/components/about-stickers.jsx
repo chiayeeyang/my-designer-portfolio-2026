@@ -2,7 +2,7 @@ import { useId, useRef, useState } from 'react';
 import './about-stickers.css';
 const stickers = [
   {id:'cake', file:'cake.png', caption:'i design with food', x:7, y:7, w:58, angle:-7},
-  {id:'matcha', file:'matcha.png', caption:'i take my matcha very seriously', x:66, y:6, w:27, angle:9},
+  {id:'matcha', file:'matcha.png', caption:'I take my matcha very seriously', x:66, y:6, w:27, angle:9},
   {id:'rock', file:'rock.png', caption:'i sometimes imagine myself being a rock', x:7, y:38, w:29, angle:-10},
   {id:'london', file:'london-sign.png', caption:'I was a Londoner for 8 years', x:53, y:35, w:40, angle:7},
   {id:'blob', file:'blob.png', caption:'Say hi to my sourdough starter, Blob', x:17, y:60, w:34, angle:-9},

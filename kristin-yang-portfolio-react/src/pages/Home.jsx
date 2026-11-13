@@ -1,4 +1,5 @@
 import NmdpPreview from '@/components/nmdp-preview';
+import NmdpAccessCover from '@/components/nmdp-access-cover';
 import ChefPreview from '@/components/chef-preview';
 import LeftoversPreview from '@/components/leftovers-preview';
 import MazdaPuzzle from '@/components/mazda-puzzle';
@@ -8,7 +9,7 @@ import SiteHeader from '@/components/site-header';
 import PersonalIntro from '@/components/personal-intro';
 
 const projects = [
-  { id: 'nmdp', date: 'September 2026', dateTime: '2026-09', title: 'NMDP × Food Delivery', description: 'Redesigning the donor journey by frictionlessly integrating swab-kit access into everyday routines.', tags: ['Design research', 'UX design', 'Service design'], locked: true, className: 'navy', Preview: NmdpPreview },
+  { id: 'nmdp', date: 'September 2026', dateTime: '2026-09', title: 'NMDP × Food Delivery', description: 'Redesigning the donor journey by frictionlessly integrating swab-kit access into everyday routines.', tags: ['Design research', 'UX design', 'Service design'], passwordProtected: true, status: 'Password protected', className: 'navy', Preview: NmdpPreview },
   { id: '01', date: 'May 2023', dateTime: '2023-05', title: 'POLY Health', description: 'Making PCOS education and everyday support feel more approachable.', tags: ['Product design', 'Healthcare', 'Web'], className: 'blue', Preview: PolyPreview },
   { id: '02', date: 'June 2023', dateTime: '2023-06', title: 'Poly App', description: 'Turning health guidance into trackable daily habits.', tags: ['Product design', 'Mobile', 'Interaction'], className: 'silver', Preview: PolyAppPreview },
   { id: '03', date: 'June 2022', dateTime: '2022-06', title: 'Got Leftovers? All Sorted!', description: 'Rethinking how leftover food is shared, packed, and valued.', tags: ['Product design', 'Food', 'Sustainability'], className: 'pink', Preview: LeftoversPreview },
@@ -26,18 +27,17 @@ export default function Home() {
         <div className="section-label"><h2>Selected work <sup>({String(projects.length).padStart(2, '0')})</sup></h2></div>
         <div className="project-grid">
           {projects.map(({ Preview, ...project }, index) => {
-            const Card = project.locked ? 'article' : 'a';
-            return <Card href={project.locked ? undefined : `/work/${project.id}`} className={`project project-${project.id}${project.locked ? ' project-locked' : ''}`} key={project.id} aria-label={project.locked ? `${project.title} — work in progress` : `View ${project.title}`}>
+            const Card = project.locked || project.passwordProtected ? 'article' : 'a';
+            return <Card href={project.locked || project.passwordProtected ? undefined : `/work/${project.id}`} className={`project project-${project.id}${project.locked ? ' project-locked' : ''}`} key={project.id} aria-label={project.locked ? `${project.title} — work in progress` : `View ${project.title}`}>
             <div className="project-caption">
               <span className="project-index">{String(index + 1).padStart(2, '0')} / <time dateTime={project.dateTime}>{project.date}</time></span>
-              <h3>{project.title}</h3>
+              <h3>{project.passwordProtected ? <a href={`/work/${project.id}`}>{project.title}</a> : project.title}</h3>
               <p className="project-description">{project.description}</p>
               <ul className="project-tags">{project.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
               {project.status && <span className="project-status">{project.status}</span>}
             </div>
             <div className={`project-art ${project.className}`}>
-              <Preview />
-              {!project.locked && <span className="project-open" aria-hidden="true">↗</span>}
+              <>{project.passwordProtected ? <NmdpAccessCover inline /> : <Preview />}</>
             </div>
           </Card>;})}
         </div>

@@ -1,7 +1,12 @@
 body:has(.personal-home) { --background: #fff; background: #fff; }
 .site-header.minimal-header.home-entrance { background: #fff; padding-inline: 3%; }
 .personal-home { background: #fff; }
-.personal-intro { min-height: calc(100svh - 100px); display: flex; align-items: center; padding: 64px 5.6% clamp(145px,20vh,230px); }
+.personal-intro { position: relative; min-height: calc(100svh - 100px); display: flex; align-items: center; padding: 64px 5.6% clamp(145px,20vh,230px); }
+.intro-explore { position: absolute; left: 50%; bottom: clamp(32px, 7vh, 72px); display: flex; flex-direction: column; align-items: center; gap: 10px; transform: translateX(-50%); color: var(--foreground); font: 400 13px/1.5 var(--font-ui); white-space: nowrap; }
+.intro-explore svg { transition: transform 180ms ease; }
+.intro-explore:hover { color: #b80000; }
+.intro-explore:hover svg { transform: translateY(4px); }
+@media (prefers-reduced-motion: reduce) { .intro-explore svg { transition: none; } }
 .personal-intro-content { width: 100%; }
 .personal-intro h1 { margin: 0; max-width: none; text-align: left; font: 400 clamp(30px,2.85vw,49px)/1.25 var(--font-ui); letter-spacing: -.025em; text-wrap: wrap; }
 .intro-cake { display: inline-block; width: 6em; height: auto; max-width: 100%; vertical-align: -.12em; margin-right: .18em; }
@@ -68,3 +73,5 @@ body:has(.personal-home) { --background: #fff; background: #fff; }
 
 .personal-home .project-locked { cursor: default; }
 .personal-home .project-locked:is(:hover,:focus-visible) .project-art { transform: none; box-shadow: none; }
+
+.personal-home .project-nmdp .project-art { height: auto; aspect-ratio: 1; }
