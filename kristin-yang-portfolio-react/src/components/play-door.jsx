@@ -2,7 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import './play-door.css';
 
 export default function PlayDoor() {
-  const [phase, setPhase] = useState('idle');
+  const [phase, setPhase] = useState(() => {
+    if (!import.meta.env.DEV) return 'idle';
+    const preview = new URLSearchParams(window.location.search).get('preview');
+    if (preview === 'open') return 'opening';
+    return preview === 'welcome' ? 'welcome' : 'idle';
+  });
   const [ready, setReady] = useState(false);
   const timers = useRef([]);
   const busy = useRef(false);
@@ -39,17 +44,20 @@ export default function PlayDoor() {
     setPhase('welcome'); chime();
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduced && ready) {
-      timers.current.push(setTimeout(() => setPhase('opening'), 650));
-      timers.current.push(setTimeout(() => setPhase('entering'), 1250));
+      // Blend into the layered photo before moving the door, then let the
+      // hinge lead the step through the doorway.
+      timers.current.push(setTimeout(() => setPhase('preparing'), 650));
+      timers.current.push(setTimeout(() => setPhase('opening'), 1100));
+      timers.current.push(setTimeout(() => setPhase('entering'), 1900));
     }
     timers.current.push(setTimeout(() => {
       setPhase('entered'); busy.current = false;
       window.location.assign('/not-work/projects');
-    }, reduced || !ready ? 900 : 3300));
+    }, reduced || !ready ? 900 : 4400));
   }
   const open = ['opening', 'entering', 'entered'].includes(phase);
   return <section className="play-door-hero" aria-label="Enter Play">
-    <figure className="play-door-figure" data-phase={phase} data-open={open}>
+    <figure className="play-door-figure" data-phase={phase} data-open={open} data-layered={phase === 'preparing' || open}>
       <div className="play-door-scene" ref={scene}>
         <img className="play-door-original" src="/images/play-door/original.jpg" alt="Kristin in a blue hat pushing a wooden door beside a brass doorbell." fetchPriority="high" />
         <div className="play-door-layers" aria-hidden="true">
@@ -60,9 +68,9 @@ export default function PlayDoor() {
           <svg className="play-door-frame" viewBox="0 0 1045 1567"><defs><clipPath id="play-right-jamb"><path d="M630 402L714 385L671 1567L576 1567Z" /></clipPath></defs><image href="/images/play-door/doorway.png" width="1045" height="1567" clipPath="url(#play-right-jamb)" /></svg>
         </div>
         <button className="play-doorbell" onClick={enter} aria-label="Ring the doorbell and enter Play" aria-disabled={busy.current}>
-          <span className="play-bell-pulse" aria-hidden="true" /><span className="play-bell-label">ring me</span>
+          <span className="play-bell-pulse" aria-hidden="true" /><span className="play-bell-label play-door-stamp"><span className="play-stamp-text">ring me</span></span>
         </button>
-        <div className="play-door-welcome" role="status" aria-live="polite">{phase !== 'idle' ? 'Welcome!' : ''}</div>
+        <div className="play-door-welcome play-door-stamp" role="status" aria-live="polite">{phase !== 'idle' ? <span className="play-stamp-text">Welcome!</span> : null}</div>
       </div>
 
     </figure>

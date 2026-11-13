@@ -8,11 +8,11 @@ import SiteHeader from '@/components/site-header';
 import PersonalIntro from '@/components/personal-intro';
 
 const projects = [
-  { id: 'nmdp', date: 'September 2026', dateTime: '2026-09', title: 'NMDP × Food Delivery', description: 'Bringing donor swab kits into everyday food pickup and delivery.', tags: ['Design research', 'UX design', 'Service design'], locked: true, className: 'navy', Preview: NmdpPreview },
+  { id: 'nmdp', date: 'September 2026', dateTime: '2026-09', title: 'NMDP × Food Delivery', description: 'Redesigning the donor journey by frictionlessly integrating swab-kit access into everyday routines.', tags: ['Design research', 'UX design', 'Service design'], locked: true, className: 'navy', Preview: NmdpPreview },
   { id: '01', date: 'May 2023', dateTime: '2023-05', title: 'POLY Health', description: 'Making PCOS education and everyday support feel more approachable.', tags: ['Product design', 'Healthcare', 'Web'], className: 'blue', Preview: PolyPreview },
-  { id: '02', date: 'June 2023', dateTime: '2023-06', title: 'Poly App', description: 'Turning health guidance into simple daily habits.', tags: ['Product design', 'Mobile', 'Interaction'], className: 'silver', Preview: PolyAppPreview },
-  { id: '04', date: 'January 2021', dateTime: '2021-01', title: 'Mazda Kids Puzzle', description: 'Illustrated puzzles that bring families into the Mazda experience.', tags: ['Illustration', 'Play', 'Brand experience'], className: 'yellow', Preview: MazdaPuzzle },
+  { id: '02', date: 'June 2023', dateTime: '2023-06', title: 'Poly App', description: 'Turning health guidance into trackable daily habits.', tags: ['Product design', 'Mobile', 'Interaction'], className: 'silver', Preview: PolyAppPreview },
   { id: '03', date: 'June 2022', dateTime: '2022-06', title: 'Got Leftovers? All Sorted!', description: 'Rethinking how leftover food is shared, packed, and valued.', tags: ['Product design', 'Food', 'Sustainability'], className: 'pink', Preview: LeftoversPreview },
+  { id: '04', date: 'January 2021', dateTime: '2021-01', title: 'Mazda Kids Puzzle', description: 'Illustrated puzzles that bring families into the Mazda experience.', tags: ['Illustration', 'Play', 'Brand experience'], className: 'yellow', Preview: MazdaPuzzle },
   { id: '05', date: 'November 2023', dateTime: '2023-11', title: 'Code Like a Chef', description: 'Explaining code through the familiar rhythm of a kitchen.', tags: ['Animation', 'Storytelling', 'Creative coding'], className: 'ink', Preview: ChefPreview },
 ];
 

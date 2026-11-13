@@ -10,6 +10,7 @@ body:has(.personal-home) { --background: #fff; background: #fff; }
 .personal-intro-links { display: flex; gap: 30px; flex: none; }
 .personal-intro-details a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; transition: color .2s; }
 .personal-intro-details a:is(:hover,:focus-visible) { color: var(--primary); }
+.personal-intro-links a:is(:hover,:focus-visible) { color: #b80000; }
 @media(min-width:1100px) { .intro-phrase-purpose { display: block; } }
 
 .personal-home .work { padding: 0 6% 110px; }
@@ -28,7 +29,7 @@ body:has(.personal-home) { --background: #fff; background: #fff; }
 .personal-home .project .project-art { width: 100%; min-width: 0; height: clamp(320px,34vw,490px); padding: 0; border-radius: var(--surface-radius); transition: transform .5s var(--ease-play), box-shadow .5s var(--ease-play); }
 .personal-home .project:is(:hover,:focus-visible) .project-art { transform: translateY(-4px); box-shadow: 0 20px 40px -28px #29332350; }
 .personal-home .project-open { width: 36px; height: 36px; font-size: 22px; left: 20px; right: auto; bottom: 20px; border: 0; background: #ffffffdc; color: var(--foreground); backdrop-filter: blur(8px); }
-.personal-home .project:is(:hover,:focus-visible) .project-open { background: var(--primary); color: white; transform: translate(2px,-2px); }
+.personal-home .project:is(:hover,:focus-visible) .project-open { background: #b80000; color: white; transform: translate(2px,-2px); }
 .personal-home footer { background: transparent; margin: 0 6%; padding: 42px 0 28px; border-top: 1px solid var(--border); }
 .personal-home .footer-cta { font: 450 clamp(32px,4vw,56px)/1.2 var(--font-ui); letter-spacing: -.03em; margin: 0 0 55px; }
 .personal-home .footer-cta > span { color: var(--primary); }

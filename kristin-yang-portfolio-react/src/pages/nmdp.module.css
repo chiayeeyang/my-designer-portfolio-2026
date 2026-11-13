@@ -1,0 +1,195 @@
+/* NMDP layout uses the portfolio's existing Manrope and mono fonts. */
+.shell {
+  --background: #fff;
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  font-family: var(--font-ui);
+}
+.page {
+  --page-gutter: 6%;
+  --stage-label-width: clamp(144px, 16vw, 240px);
+  --column-gap: 32px;
+  --section-space: clamp(80px, 7vw, 112px);
+  width: 100%;
+  max-width: 1728px;
+  margin-inline: auto;
+}
+.page h1, .page h2, .page h3, .page h4 { margin: 0; font-family: var(--font-ui); }
+.page p { margin: 0; line-height: 1.6; }
+.page section { scroll-margin-top: 124px; }
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 24px;
+  background: #d9d9d9;
+  color: var(--foreground);
+  font: 500 13px/1.5 var(--font-ui);
+  text-align: center;
+}
+.heroImage { width: 100%; aspect-ratio: 1728 / 793; }
+.intro, .metadata, .demos, .story { margin-inline: var(--page-gutter); }
+.intro { padding-top: 48px; }
+.intro h1 {
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: 1.15;
+}
+.intro h1 a { text-decoration: underline; text-decoration-thickness: .035em; text-underline-offset: .13em; }
+.intro h1 a:hover { color: #b80000; }
+.intro .dek {
+  max-width: 1000px;
+  margin-top: 24px;
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.45;
+  letter-spacing: -.02em;
+}
+.metadata {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+  margin-bottom: 0;
+  border-top: 1px solid #d9dcd7;
+  padding-top: 24px;
+}
+.metadata div { min-width: 0; }
+.metadata dt {
+  color: #666b64;
+  font: 400 12px/1.5 var(--font-label);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.metadata dd { margin: 12px 0 0; font-size: 16px; font-weight: 450; line-height: 1.6; }
+.demos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 64px;
+}
+.demos:focus-visible { outline: 2px solid #b80000; outline-offset: 6px; }
+.demo { aspect-ratio: 501 / 698; max-height: 520px; }
+.story { margin-top: var(--section-space); font-size: clamp(18px, 1.4vw, 20px); }
+.stage {
+  display: grid;
+  grid-template-columns: var(--stage-label-width) minmax(0, 1fr);
+  gap: var(--column-gap);
+  align-items: start;
+}
+.stage > * { min-width: 0; }
+.stage .stageLabel {
+  padding-top: 6px;
+  color: #666b64;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -.015em;
+  line-height: 1.4;
+}
+.copy > p, .insights { max-width: 760px; }
+.copy h3 {
+  max-width: 760px;
+  font-size: clamp(28px, 2.5vw, 36px);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -.03em;
+}
+.copy h3 + p { margin-top: 16px; }
+.copy > p + p { margin-top: 32px; }
+.page .takeaway {
+  max-width: 960px;
+  margin-top: 48px;
+  font-size: clamp(20px, 1.8vw, 24px);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -.015em;
+}
+.challenge, .research { margin-top: var(--section-space); }
+.researchMethods { margin-top: 24px; }
+.methodButtons { display: flex; flex-wrap: wrap; gap: 10px; }
+.methodButtons, .researchInsights { margin-left: calc(var(--stage-label-width) + var(--column-gap)); }
+.methodButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #d9dcd7;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--foreground);
+  font: 400 14px/1.5 var(--font-ui);
+  text-align: left;
+  cursor: pointer;
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+.methodButton > span { flex-shrink: 0; color: #666b64; font-size: 18px; line-height: 1; }
+.methodButton:hover, .methodButton[aria-expanded="true"] {
+  border-color: #b80000;
+  background: #fcf5f4;
+  color: #b80000;
+}
+.methodButton:hover > span, .methodButton[aria-expanded="true"] > span { color: inherit; }
+.methodButton:focus-visible { outline: 2px solid #b80000; outline-offset: 4px; }
+.methodPanel { margin-top: 20px; }
+.methodPanel[hidden] { display: none; }
+.methodPanel:not([hidden]) { animation: revealResearch 200ms ease-out; }
+@keyframes revealResearch {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .methodButton { transition: none; }
+  .methodPanel:not([hidden]) { animation: none; }
+}
+.copy .insightsHeading { margin-top: 48px; }
+.insights { display: grid; gap: 48px; margin-top: 32px; margin-bottom: 0; padding: 0; list-style: none; }
+.insights li { display: grid; gap: 16px; }
+.insights h4 { font-size: clamp(22px, 1.8vw, 26px); font-weight: 600; line-height: 1.35; letter-spacing: -.02em; }
+.insights .implication { padding-left: 16px; border-left: 2px solid #b80000; font-weight: 600; }
+.design { margin-top: var(--section-space); padding-bottom: var(--section-space); }
+.design > p { max-width: 760px; font-size: clamp(24px, 2.3vw, 32px); font-weight: 500; letter-spacing: -.025em; line-height: 1.4; }
+
+@media (max-width: 900px) {
+  .page { --stage-label-width: 132px; --column-gap: 24px; }
+  .metadata, .demos { gap: 24px; }
+}
+@media (max-width: 600px) {
+  .page { --page-gutter: 24px; --section-space: 64px; }
+  .page section { scroll-margin-top: 100px; }
+  .heroImage { aspect-ratio: 4 / 3; }
+  .intro { padding-top: 32px; }
+  .intro h1 { font-size: clamp(34px, 8vw, 46px); }
+  .intro .dek { margin-top: 20px; font-size: 20px; }
+  .metadata { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; margin-top: 32px; }
+  .metadata dd { font-size: 15px; }
+  .demos {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 88%;
+    gap: 16px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #adb2aa transparent;
+    margin-top: 48px;
+    padding-bottom: 12px;
+  }
+  .demo { scroll-snap-align: start; scroll-snap-stop: always; max-height: none; }
+  .story { font-size: 18px; }
+  .stage { display: block; }
+  .stage .stageLabel { margin-bottom: 16px; padding-top: 0; font-size: 16px; }
+  .copy h3 { font-size: 28px; }
+  .copy > p + p { margin-top: 24px; }
+  .page .takeaway { margin-top: 40px; }
+  .methodButtons, .researchInsights { margin-left: 0; }
+  .copy .insightsHeading { margin-top: 40px; }
+  .insights { gap: 48px; }
+  .insights h4 { font-size: 22px; }
+  .design > p { font-size: 24px; }
+}
